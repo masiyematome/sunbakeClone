@@ -1,0 +1,1335 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width : 87%;
+    margin : auto;
+    padding : 0;
+}
+
+
+/*****NAVIGATION BAR STYLING STARTS HERE****/
+
+
+/*****NAVIGATIONBAR STYLING STARTS HERE*****/
+
+.navbar{
+    padding : 0px 100px 0px;
+    height : 118px;
+
+    background-image: url("pics/general_pics/header.jpg");
+}
+
+.navbar ul{
+    padding : 0;
+    margin : 0;
+    list-style-type : none;
+}
+
+.navbar .mainMenu{
+    width : 100%;
+    position : relative;
+}
+
+.navbar .mainMenu>li{
+    display : inline-block;
+    margin-left : 9px;
+}
+
+.navbar a{
+    color : white;
+    padding :5px;
+    font-weight : 500;
+    font-size : 18px;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    position : relative;
+    display: block;
+}
+
+.navbar .fa{
+    display : none;
+}
+
+.navbar .mainMenu>li:hover a{
+    background-image : url("pics/general_pics/menu_1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar .logoLink{
+    z-index : 1;
+}
+
+.navbar .logoLink a{
+    padding : 0;
+    z-index : 1;
+
+
+    -webkit-animation: opacity 2s;
+    -moz-animation: opacity 2s;
+    -o-animation: opacity 2s;
+    -ms-animation: opacity 2s;
+    animation : opacity 2s;
+}
+
+@keyframes opacity{
+    from{
+        opacity : 0;
+        top : 15px;
+    }
+
+    to{
+        opacity: 1;
+        top  : 0px;
+    }
+}
+
+.navbar li:nth-of-type(5):hover a{
+    background-image: none;
+}
+
+.navbar .mainMenu>li a::after{
+    content :'';
+    height : 50%;
+    border : 1px solid white;
+    position : absolute;
+    left : 100%;
+    top : 30%;
+    border-width : 1px;
+}
+
+.navbar li:nth-of-type(5) a::after ,.navbar li:nth-of-type(9) a::after{
+    content : none;
+}
+
+.navbar .mainMenu>li:hover a::after{
+    border: 1px solid transparent;
+}
+
+.navbar .active a{
+    color : yellow;
+}
+
+.navbar .active .subMenu a ,.navbar .active .superSubMenu a{
+    color : white;
+}
+
+.navbar .toggle-button{
+    border : none;
+    background-color : rgb(243, 67, 36);
+    color : white;
+    padding : 3px 10px;
+    position : relative;
+    left : 50%;
+    transform : translateX(-50%);
+    display: none;
+    border-radius : 5px;
+}
+
+.navbar .toggle-button:focus{
+    outline : none;
+}
+
+.navbar .toggle-button .fa{
+    transform: scale(1.5,1);
+}
+
+.navbar .title-bar{
+    display: none;
+}
+
+.navbar .subMenu{
+    position : absolute;
+    display : none;
+    background-image: url("pics/general_pics/menu_1.png");
+    z-index : 2;
+}
+
+.navbar .mainMenu>li:hover .subMenu{
+    display : block;
+}
+
+.navbar .mainMenu>li:nth-of-type(3) .subMenu{
+    width : 11.7%;
+}
+
+.navbar .mainMenu>li:nth-of-type(8) .subMenu{
+    width : 10.6%;
+}
+
+.navbar .mainMenu>li:hover .subMenu>li a{
+    background-image : none;
+}
+
+.navbar .mainMenu>li:hover .navbar a{
+    display : inline-block;
+}
+
+.navbar .subMenu a:hover{
+    color : yellow;
+}
+
+.navbar .subMenu li{
+    position : relative;
+}
+
+.navbar .superSubMenu{
+    position : absolute;
+    top : 0;
+    transform : translateX(100%);
+    display: none;
+    background-image: url("pics/general_pics/menu_2.png");
+}
+
+.navbar .subMenu>li:hover .superSubMenu{
+    display : block;
+}
+
+.navbar .dropdownDivider{
+    margin : 0;
+    border-color : white;
+}
+
+
+/***SLIDESHOW STARTS HERE**/
+
+.slideshow-container{
+    position : relative;
+    height : 360px;
+}
+
+#slides{
+    position: relative;
+    height : 100%;
+    padding : 0;
+    margin : 0;
+    list-style-type : none;
+}
+
+.slide{
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    top : 0px;
+    left : 0px;
+    display : none;
+    cursor: pointer;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.slide a{
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    border : none;
+}
+
+
+.slide.showing{
+    display : block;
+
+    -webkit-animation: fadein 1s;
+    -moz-animation : fadein 1s;
+    -o-animation : fadein 1s;
+    -ms-animation : fadein 1s;
+    animation : fadein 1s;
+}
+
+@keyframes fadein{
+    from{opacity : 0.3;}
+    to{opacity : 1;}
+}
+
+.slide:nth-of-type(1){
+    background-image: url("pics/homepage_pics/sunbake_web_slider-01.png");
+}
+
+.slide:nth-of-type(2){
+    background-image: url("pics/homepage_pics/slider-home.jpg");
+}
+
+.controls{
+    position: absolute;
+    top : 45%;
+    padding : 10px;
+    font-size: 50px;
+    width : 50px;
+    height : 50px;
+    background : url("pics/general_pics/header.jpg");
+    opacity : 0.8;
+    border-radius: 50%;
+    display : none;
+}
+
+.slideshow-container:hover .controls{
+    display: block;
+}
+
+.controls .fa{
+    color:yellow;
+    opacity : 0.5;
+    position : absolute;
+    top : 2%;
+}
+
+.controls .fa-caret-left{
+    left : 25%;
+}
+
+.controls .fa-caret-right{
+    right : 25%;
+}
+
+
+#previous{
+    left : 25px;
+
+    -webkit-animation: fadeinright 0.4s;
+    -moz-animation: fadeinright 0.4s;
+    -o-animation: fadeinright 0.4s;
+    -ms-animation : fadeinright 0.4s;
+    animation : fadeinright 0.4s;
+}
+
+#next{
+    right : 15px;
+
+    -webkit-animation: fadeinleft 0.4s;
+    -moz-animation: fadeinleft 0.4s;
+    -o-animation: fadeinleft 0.4s;
+    -ms-animation : fadeinleft 0.4s;
+    animation : fadeinleft 0.4s;
+}
+
+@keyframes fadeinright{
+    from{
+        left : -25px
+    }
+}
+
+@keyframes fadeinleft{
+    from{
+        right : -25px;
+    }
+}
+
+
+
+/**SECOND SECTION STARTS HERE**/
+
+#pageproductsandcontactdetails{
+    position : relative;
+    margin-top : 5px;
+}
+
+.homepage-products h1{
+    font-size : 25px;
+    margin-bottom : 15px;
+    color : #d71920;
+}
+
+.homepage-products p{
+    font-size: 16px;
+    color: #0059a9;
+    margin : 15px 0px 10px;
+}
+
+.homepage-products .row .col{
+    padding : 0px 40px 0px 15px;
+}
+
+/***PAGE FOOTER STYLING STARTS HERE***/
+
+.contact-details{
+    background-image: url("pics/general_pics/footer.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-details .row{
+    padding : 15px 15px 0px;
+    margin : 0px 69px;
+}
+
+.contact-details .spoonpart{
+    display: flex;
+}
+
+
+.contact-details p{
+    margin-left : 35px;
+    margin-top : 35px;
+    font-size : 13px;
+    padding : 5px 0px;
+    color : white;
+}
+
+.contact-details .sitemap{
+    padding : 0px 15px 0px
+}
+
+.contact-details .sitemap p{
+    font-size : 16px;
+    font-weight : 700;
+    color : #fff;
+}
+
+.contact-details .sitemap .navbar-nav{
+   display: block;
+   position: relative;
+   left : 25px;
+}
+
+.contact-details .sitemap .nav-link{
+    float : left;
+    margin-left : 10px;
+    color : #fff;
+    font-weight: 700;
+    padding-top : 0;
+    margin-top: 0;
+}
+
+.contact-details .sitemap .nav-link:hover{
+    text-decoration: underline;
+}
+
+.contact-details .sitemap .nav-link::after{
+    content : '|';
+    position: relative;
+    left : 5px;
+}
+
+.contact-details .sitemap .no-line.nav-link::after{
+    display: none;
+}
+
+/*****ABOUT PAGE STYLING STARTS HERE*****/
+/*****==============================*****/
+
+.aboutus-body h1{
+    color: #d71920;
+    font-weight: 400;
+}
+
+.aboutus-body p{
+    color: #0059a9;
+    font-family: 'Open Sans';
+}
+
+.aboutus-body .aboutusinfo{
+    position : relative;
+    top : 30px;
+}
+
+/*****PRODUCT RANGE STYLING STARTS HERE*****/
+
+
+.productrange-body h5,.bunsAndRolls-body h5,.vitaLifeBunsAndRolls-body h5 ,.treatsBunsAndRolls-body h5 ,.vitaLifeBread-body h5{
+    color : #d71920;
+    font-weight : 700;
+    padding-top : 10px;
+    font-size : 18px;
+}
+
+.productrange-body p,.bunsAndRolls-body p ,.vitaLifeBunsAndRolls-body p,.treatsBunsAndRolls-body p ,.vitaLifeBread-body p{
+    position : absolute;
+    top : 98%;
+    color: #0059a9;
+    font-family: 'Open Sans';
+    font-size : 16px;
+}
+
+.productrange-body .row{
+    padding : 30px;
+}
+
+.pageband{
+    padding : 15px 10px 10px 100px;
+    background-image: url("pics/general_pics/band-background.jpg");
+    background-position : center;
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.pageband h1{
+    font-size : 28px;
+    color : #fff;
+    font-weight : 400;
+}
+
+.bunsAndRolls-body .row{
+    padding-bottom : 30px;
+}
+
+.bunsAndRolls-body .col-md-4{
+    margin-left : 35px;
+}
+
+.bunsAndRolls-body img{
+    width : 280px;
+    height : 338px;
+}
+
+/***BAKERIES PAGE STYLING STARTS HERE***/
+
+.bakeries-body p{
+    color: #0059a9;
+    font-size : 16px;
+    font-weight : 400;
+    font-family: 'open Sans';
+}
+
+.bakeries-body .bakeries-line{
+    border-color: #0059a9;
+    position : relative;
+    margin : 25px 0px;
+}
+
+.bakeries-body h5{
+    color : #d71920;
+    font-weight: 700;
+    font-size : 16px;
+}
+
+/*****COMPETITIONS PAGE STYLING STARTS HERE*****/
+
+.competitionsWinners-body{
+    padding : 50px 100px 30px;
+    background-color : #C7333A ;
+}
+
+.competitionsband{
+    background-image : url("pics/general_pics/header.jpg");
+    padding : 15px 10px 10px 100px;
+    background-position : center;
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.competitionsband h1{
+    font-size : 28px;
+    color : #fff;
+    font-weight : 400;
+    font-family: sans-serif;
+}
+
+.competitions-body h1{
+    font-size : 28px;
+    color : #0059a9;
+    font-family : sans-serif;
+}
+
+.competitions-line{
+    border : 1px dashed #d71920;
+}
+
+.competition-terms{
+    list-style-type: none;
+    padding : 0;
+    margin : 0;
+}
+
+.competition-terms li a{
+    color : #0059a9;
+}
+
+.picturesPart{
+    padding : 8px 0px 10px 0px;
+}
+
+/*****CONTACT US PAGE STYLING STARTS HERE*****/
+
+.contactuslist{
+    list-style-type : none;
+    position : relative;
+    top : 55px;
+}
+
+.contactuslist li{
+    padding : 0;
+    margin : 0;
+}
+
+.contactuslist p{
+    font-size: 16px;
+    font-family: 'open-sans';
+    color: #0059a9;
+    margin : 2px;
+    font-weight : 400;
+}
+
+.contactuslist h5{
+    font-size : 16px;
+    font-weight : 600;
+    color : #d71920;
+    font-family: 'open-Sans';
+}
+
+.contactusline{
+    border : 1px dashed #d71920;
+}
+
+.contactusform h3{
+    color : #d71920;
+    font-weight : bold;
+    font-size : 24px;
+}
+
+.contactusform{
+    position : relative;
+    left : 20px;
+    padding : 0;
+}
+
+#contactform input{
+    padding : 7px;
+    border : none;
+    margin : 0;
+    width : 120%;
+    caret-color: grey;
+    color : grey;
+}
+
+#contactform input::placeholder{
+    color : grey;
+    font-weight : 450;
+    font-size : 15px;
+}
+
+#contactform input:focus{
+    outline : none;
+}
+
+#contactform .validationMessage{
+    color : #d71920;
+    left : 3px;
+    font-size : 14px;
+}
+
+#contactform label{
+    color: #0059a9;
+    font-size : 14px;
+    padding : 5px;
+    display : block;
+}
+
+#contactform select{
+    width : 120%;
+    font-size : 15px;
+    color : grey;
+    padding : 5px;
+    border : none;
+    margin-left : 2px;
+
+}
+
+#contactform select:focus{
+    outline : none;
+}
+
+#contactform #address, #message{
+    width : 120%;
+    padding : 5px;
+    margin-left : 2px;
+    border : none;
+    margin-top : 8px;
+    height : 100px;
+    caret-color: grey;
+    color : grey;
+}
+
+#contactform #message{
+    margin-top : 0px;
+}
+
+#contactform #address::placeholder{
+    color : grey;
+    font-weight : 450;
+    font-size : 15px;
+}
+
+#contactform #address:focus{
+    outline : none;
+}
+
+#contactform #message::placeholder{
+    color : grey;
+    font-weight : 450;
+    font-size : 15px;
+}
+
+#contactform #message:focus{
+    outline : none;
+}
+
+#contactform .icons-container{
+    width : 110%;
+    height : 110px;
+    border : 1px solid #0059A9;
+    margin-left : 3px;
+    padding : 10px;
+    position : relative;
+
+}
+
+.icons-container p{
+    font-size : 14px;
+    color: #0059a9;
+    font-family: 'open sans';
+    text-align : center;
+}
+
+.icons {
+    cursor : pointer;
+    color: #0059a9;
+    position : absolute;
+    top : 20%;
+    left : 20%;
+}
+
+.icons .fa{
+    padding : 10px;
+}
+
+.icons .fa:focus{
+    border : 1px solid red;
+}
+
+.icons .fa:focus{
+    border : 1px solid red;
+}
+
+.icons .fa-heart{
+    font-size :35px;
+}
+
+.icons .fa-home{
+    font-size : 40px;
+}
+
+.icons .fa-fighter-jet{
+    font-size : 45px;
+    transform: rotate(-45deg);
+}
+
+.iconName{
+    color : red;
+    font-weight : 600;
+}
+
+.submitForm{
+    margin-left : 3px;
+    padding : 10px;
+    border : 1px solid #2EA3F2;
+    font-size : 18px;
+    font-weight: 500;
+    width : 90px;
+    color : #2EA3F2;
+    background-color : transparent;
+    margin-top : 10px;
+    transition : ease-out 0.8s;
+
+}
+
+.submitForm:hover{
+    background-color : #e8e8e8;
+    border : 1px solid #e8e8e8;
+    transition : ease-in 0.4s;
+}
+
+.submitForm:focus{
+    outline : none;
+}
+
+/*****DOWNLOADS PAGE STYLING STARTS HERE*****/
+
+
+.downloads-body h5,p{
+    color: #0059a9;
+    font-size : 16px;
+    font-family : 'open-sans';
+}
+
+.downloads-body h5{
+    font-weight : 600;
+    margin-top : 5px;
+}
+
+.downloads-body .row{
+    position : relative;
+}
+
+.downloads-body p{
+    position : absolute;
+    top : 98%;
+}
+
+.downloads-body .firstRow ,.secondRow{
+    padding-bottom: 30px;
+}
+
+/****RECIPES PAGE STYLING STARTS HERE****/
+
+.recipes-body h4{
+    color : #d71920;
+    text-align : center;
+    font-family: 'open-sans';
+    font-weight : 700;
+    font-size : 16px;
+}
+
+/****BUNS AND ROLLS VITA LIFE RANGE STYLING STARTS HERE****/
+
+.pageband.vitaLife{
+    background-image : url("pics/productrange_pics/vitalifebuns_pics/vita.jpg");
+}
+
+.vitaLifeBunsAndRolls-body .col{
+    padding : 10px;
+}
+
+.vitaLifeBunsAndRolls-body .row img{
+    height : 338px;
+}
+
+/****TREATS BUNS STYLING STARTS HERE****/
+
+
+.pageband.treats{
+    background-image : url("pics/productrange_pics/treatsbuns_pics/treats.jpg");
+}
+
+
+.treatsBunsAndRolls-body .row{
+    padding: 30px;
+}
+
+.treatsBunsAndRolls-body .row img{
+    height : 338px;
+}
+
+.treatsBunsAndRolls-body .col-md-4{
+    margin-left : 25px;
+}
+
+/****VITA-LIFE BREAD PAGE STYLING STARTS HERE*****/
+
+
+.vitaLifeBread-body .row img{
+    height : 338px;
+}
+
+.vitaLifeBread-body .column2,.column3{
+    margin-left : 85px;
+}
+
+.vitaLifeBread-body h5{
+    font-size : 18px;
+}
+
+
+/****COMMON STYLING****/
+
+/**image slider styling**/
+
+.slider img{
+    width : 100%;
+}
+
+.pagebody{
+    background-image: url("pics/general_pics/background.jpg");
+    background-position : center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding : 40px 100px 80px !important;
+}
+
+
+/*******MEDIA**********/
+/*******QUERIES********/
+
+@media (min-width : 990px) and (max-width : 1350px){
+
+    body{
+        width : 99%;
+    }
+
+    .homepage-products img{
+        width : 95%;
+    }
+
+    .aboutus-body img,.competitionsWinners-body img,.competitions-body img,.contactus-body img{
+        width : 100%;
+    }
+
+    .productrange-body img,.bunsAndRolls-body img,.treatsBunsAndRolls-body img,.vitaLifeBunsAndRolls-body img{
+        width : 100%;
+    }
+
+    .downloads-body img{
+        width : 95%;
+    }
+
+    .contactus-body .row{
+        padding : 5%;
+    }
+
+    .contactus-body .contactusform{
+        padding : 0;
+        margin : 0;
+        width : 100% !important;
+    }
+
+    .contactus-body form{
+        margin-top : 0;
+    }
+
+    .contactus-body .contactuslist{
+        padding : 0%;
+    }
+
+    .contactusform .icons-container .icons{
+        margin-top : 7%;
+    }
+
+    .contact-details .row{
+        width : 100%;
+        padding : 0;
+        margin : 0;
+    }
+
+    .contact-details .spoonpart{
+        position: relative;
+        width : 100%;
+        margin-top : 1%;
+    }
+
+    .contact-details .sitemap{
+        font-size : 14px;
+    }
+
+}
+
+@media (max-width : 1000px){
+
+    body{
+        width : 100%;
+    }
+
+    /**NAVIGATION BAR STARTS HERE***/
+
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        height : 100%;
+        padding : 0px 5px 10px;
+        text-align: center;
+
+    }
+
+    .navbar .navbar-links{
+        position: relative;
+        width : 100%;
+        padding : 10px 0px 25px;
+        display : none;
+
+        -webkit-animation: slidedown 1s;
+        animation: slidedown 1s;
+
+    }
+
+    @keyframes slidedown {
+        from{
+            transform: scaleY(0.9);
+        }
+
+        to{
+            transform : scaleY(1)
+        }
+    }
+
+    .navbar .mainMenu>li{
+        display : block;
+    }
+
+    .navbar a{
+        font-size : 14px;
+        font-weight : 550;
+        font-family: "Open Sans";
+        padding : 4px;
+    }
+
+    .navbar .mainMenu .fa{
+        position: relative;
+        left : 1%;
+        transform : translateX(-50%);
+    }
+
+    .navbar a:hover{
+        color : #000;
+    }
+
+    .navbar li:hover .fa{
+        color : #fff;
+    }
+
+    .navbar .fa{
+        display : inline-block;
+    }
+
+    .navbar .mainMenu>li a::after{
+        content : none;
+    }
+
+    .navbar .navbar-links .logoLink{
+        display : none;
+    }
+
+    .navbar .title-bar{
+        display : block;
+        padding : 0px 0px 10px;
+    }
+
+    .navbar .toggle-button{
+        display: block;
+    }
+
+    .navbar .subMenu ,.navbar .superSubMenu{
+        width : 100% !important;
+        position : relative;
+    }
+
+    .navbar .mainMenu>li:hover .subMenu{
+        display : none;
+    }
+
+    .navbar .mainMenu>li:hover .subMenu{
+        background-image: none;
+    }
+
+    .navbar .subMenu>li:hover a,.navbar .subMenu>li:hover a{
+        background-image: url("pics/general_pics/menu_1.png") !important;
+    }
+
+    .navbar .subMenu>li:hover .mainMenu>li:hover a{
+        background-image : none !important;
+    }
+
+    .navbar .subMenu{
+        background-image : none;
+    }
+
+    .navbar .subMenu>li:hover .superSubMenu{
+        display : none;
+    }
+
+
+    .navbar .superSubMenu{
+        left : 0;
+        transform: translateX(0%);
+    }
+
+    .navbar .subMenu a:hover{
+        color : #000;
+    }
+
+    .navbar .dropdownDivider{
+        display : none;
+    }
+
+    /***NAVIGATION BAR ENDS HERE****/
+
+    .slider{
+        width : 80%;
+        margin : auto;
+    }
+
+    .slideshow-container{
+        width : 80%;
+        margin : auto;
+    }
+
+    .slideshow-container img{
+        width : 100%;
+    }
+
+    .homepage-products.pagebody{
+        width : 80%;
+        margin : auto;
+        margin-top : -105px;
+        text-align : center;
+    }
+    
+    .pageband,.competitionsband{
+        text-align : center;
+        padding : 10px 10px 5px 30px; 
+        width : 80%;
+        margin : auto;
+    }
+
+    .pageband h1,.competitionsband h1{
+        font-size : 20px;
+        font-weight : 600;
+    }
+
+    .slideshow-container #slides{
+        width : 100%;
+        height : 70%;
+    }
+
+    .pagebody{
+        padding : 50px !important;
+        width : 80%;
+        margin : auto;
+    }
+
+    .pagebody h1{
+        font-size : 25px;
+        font-weight : 450;
+    }
+
+    .aboutus-body{
+        text-align : left;
+        padding : 40px 35px !important;
+    }
+
+    .aboutus-body .row{
+       padding : 0;
+    }
+
+    .aboutus-body img{
+        width : 55%;
+    }
+
+    .aboutus-body h1{
+        font-size : 35px;
+        font-weight : 500;
+    }
+
+    .contactus-body{
+        padding : 40px 0px !important;
+        text-align : left;
+    }
+
+    .contactus-body .row{
+        width : 100%;
+    }
+
+    .contactus-body .contactusform{
+        width : 70%;
+        position : relative;
+        margin-top : 60px;
+        margin-left : 25px;
+    }
+
+    .contactus-body .contactuslist{
+        width : 90%;
+        
+    }
+
+    .contactus-body img{
+        position :relative;
+        left : 50%;
+        transform: translateX(-50%);
+    }
+
+    #contactform .icons-container{
+        width : 80%;
+        height : 110px;
+        border : 1px solid #0059A9;
+        margin-left : 3px;
+        padding : 10px;
+        position : relative;
+    }
+
+    .competitionsWinners-body{
+        padding : 40px 30px 40px;
+    }
+
+    .competitionsWinners-body img{
+        width : 100%;
+    }
+
+    .bakeries-body {
+        text-align : left;
+    }
+
+    .bakeries-body h5{
+        font-size : 14px;
+    }
+
+    .downloads-body{
+        padding : 40px 30px 20px !important;
+    }
+
+    .downloads-body img{
+        width : 55%;
+    }
+
+    .downloads-body h5{
+        text-align : left;
+    }
+
+    .downloads-body p{
+        position: relative;
+        text-align : left;
+        font-size : 14px;
+    }
+
+    .competitionsWinners-body{
+        width : 80%;
+        margin : auto;
+    }
+
+    .competitions-body img{
+        width : 100%;
+    }
+
+    .bunsAndRolls-body .row,.treatsBunsAndRolls-body .row,.vitaLifeBread-body .row,.vitaLifeBunsAndRolls-body .row,
+    .productrange-body .row
+    {
+        display : flex;
+        flex-direction: column;
+        position : relative;
+        width : 100%;
+    }
+
+    .bunsAndRolls-body .firstRow .col-lg-4:nth-of-type(2) ,.bunsAndRolls-body .secondRow .col-lg-4:nth-of-type(2){
+        margin-top : 40px;
+    }
+
+    .treatsBunsAndRolls-body .firstRow .col-lg-4:nth-of-type(2),.treatsBunsAndRolls-body .secondRow .col-lg-4:nth-of-type(2){
+        margin-top : 40px;
+    }
+
+    .vitaLifeBread-body .column2 ,.vitaLifeBread-body .column3{
+        margin-left : 0;
+        margin-top : 40px;
+    }
+
+    .vitaLifeBunsAndRolls-body .col-lg-4:nth-of-type(2){
+        margin-top : 40px;
+    }
+
+    .productrange-body .col-lg-4:nth-of-type(2) ,.productrange-body .col-lg-4:nth-of-type(3){
+        margin-top : 40px;
+    }
+
+    .contact-details{
+        width : 80%;
+        margin : auto;
+    }
+
+    .contact-details .row{
+        width : 100%;
+        padding : 1%;
+        margin : 0;
+    }
+
+    .contact-details .spoonpart{
+        position: relative;
+        width : 100%;
+        top : 7px;
+    }
+
+    .contact-details .sitemap{
+        display : none;
+    }
+    
+}
+
+@media (max-width : 776px){
+    
+    .pagebody,.pageband,.competitionsband,.slider,.contact-details,.homepage-products.pagebody{
+        width : 100%;
+    }
+
+    .homepage-products img{
+        width : 95%;
+    }
+
+    .slideshow-container{
+        position: relative;
+        width : 100%;
+        height : 205px;
+    }
+
+    .slideshow-container img{
+        height : 100%;
+        position: absolute;
+    }
+
+    .homepage-products.pagebody{
+        margin-top : -60px;
+    }
+
+    .aboutus-body img{
+        width : 100%;
+    }
+
+    .downloads-body img{
+        width : 100%;
+    }
+    
+    .productrange-body img{
+        width : 100%;
+    }
+
+    .competitionsWinners-body{
+        width : 100%;
+    }
+
+    #contactform .icons-container{
+        width : 100%;
+    }
+
+    .productrange-body .row{
+        margin-top : 40px;
+    }
+
+    .bunsAndRolls-body .row ,.treatsBunsAndRolls-body .row,.vitaLifeBread-body .row,.vitaLifeBunsAndRolls-body .row,
+    .productrange-body .row
+    {
+        width : 100%;
+    }
+
+    .bunsAndRolls-body .col-lg-4,.treatsBunsAndRolls-body .col-lg-4,.vitaLifeBread-body .row,.vitaLifeBunsAndRolls-body .row,
+    .productrange-body .row
+    {
+        left : 60% !important;
+        transform: translateX(-50%);
+        width : 78%;
+        padding : 0px;
+    }
+    
+     .contactus-body .icons-container{
+         width : 120% !important;
+     }
+     
+     .contactus-body .icons{
+         margin-top : 15px;
+     }
+     
+     .contact-details .row{
+         padding : 0px;
+     }
+     
+     .contact-details .spoonpart img{
+         width : 40%;
+         height : 80%;
+         margin-top : 40px;
+     }
+
+}
+
+

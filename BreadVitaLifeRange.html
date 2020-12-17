@@ -1,0 +1,238 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>Sunbake-Clone</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel = "stylesheet" href = "main_stylesheet.css">
+</head>
+
+<body>
+
+    <!--FIRST SECTION STARTS HERE-->
+
+<section id = "navigationbarandslider-section">
+
+  <!--NAVIGATION BAR STARTS HERE-->
+  
+  <nav class = "navbar">
+
+    <div class = "title-bar">
+      <img src = "pics/general_pics/logo.png">
+    </div>
+
+    <button class = "toggle-button">
+      <i class = "fa fa-bars"></i>
+    </button>
+
+    <div class = "navbar-links">
+
+      <!---MAIN MENU STARTS HERE-->
+
+      <ul class = "mainMenu">
+
+        <li><a href = "index.html">Home</a></li>
+        <li><a href = "AboutUs.html">About Us</a></li>
+
+        <!--Second dropdown menu starts here-->
+
+        <li><a href = "ProductRange.html">Product Range<i class = "fa fa-caret-right"></i></a>
+
+          <!--First submenu starts here-->
+        
+          <ul class = "subMenu">
+
+            <!--First super submenu-->
+
+            <hr class = "dropdownDivider"></hr>
+
+            <li><a href = "ProductRange.html">Bread<i class = "fa fa-caret-right"></i></a>
+            
+              <ul class = "superSubMenu">
+                <li><a href = "ProductRange.html">Everyday Range</a></li>
+                <hr class = "dropdownDivider"></hr>
+                <li class = "active"><a href = "BreadVitaLifeRange.html">Vita-Life Range</a></li>
+              </ul>
+
+            </li>
+
+            <!--Second super submenu-->
+
+            <hr class = "dropdownDivider"></hr>
+
+            <li><a href = "BunsAndRolls.html">Buns & Rolls<i class = "fa fa-caret-right"></i></a>
+            
+              <!--Second super submenu-->
+
+              <ul class = "superSubMenu">
+                <li><a href = "BunsAndRolls.html">Everyday Range</a></li>
+                <hr class = "dropdownDivider"></hr>
+                <li><a href = "BunsTreatsRange.html">Treats Range</a></li>
+                <hr class = "dropdownDivider"></hr>
+                <li><a href = "BunsVitaLifeRange.html">Vita-Life Range</a></li>
+              </ul>
+            
+            </li>
+
+          </ul>
+        
+        </li>
+
+        <li><a href = "Recipes.html">Recipes</a></li>
+        <li class = "logoLink"><a href = "index.html"><img src = "pics/general_pics/logo.png"></a></li>
+        <li><a href = "Downloads.html">Downloads</a></li>
+        <li><a href = "Bakeries.html">Bakeries</a></li>
+
+        <!--Second dropdown menu starts here-->
+
+        <li><a href = "#">Competitions<i class = "fa fa-caret-right"></i></a>
+
+          <!---Second submenu starts here-->
+
+          <ul class = "subMenu">
+            <hr class = "dropdownDivider"></hr>
+            <li><a href = "CompetitionWinners.html">Competition Winners</a></li>
+          </ul>
+
+        </li>
+
+        <li><a href = "ContactUs.html">Contact Us</a></li>
+        
+      </ul>
+      
+    </div>
+
+  </nav>
+
+        <!--AREA AFTER NAVIGATION BAR STARTS HERE-->
+
+        <div class = "breadVitaLife-slider slider">
+
+            <a href = "BreadVitaLifeRange.html"><img src = "pics/productrange_pics/vitalifebread_pics/slider-vita-bread-1.jpg" alt = ""></a>
+          
+        </div>
+
+    </section>
+
+    <!--SECOND SECTION STARTS HERE-->
+
+    <section id = "pageproductsandcontactdetails">
+
+        <div class = "pageband vitaLife">
+            <h1>Vita-Life Bread Range</h1>
+        </div>
+
+        <!--BREAD VITA-LIFE RANGE PRODUCTS DISPLAYED BELOW-->
+
+        <div class = "vitaLifeBread-body pagebody">
+
+            <div class = "row firstRow">
+
+                <div class = "col-lg-3 column">
+                    <img src = "pics/productrange_pics/vitalifebread_pics/VitaWheat_New.jpg" onmouseover = "newVitaLifeBreadOne()" onmouseout = "oldVitaLifeBreadOne()" id = "firstVitaLifeBread">
+                    <h5>Vita-Life Crushed Wheat Bread 700g</h5>
+                    <p>Barcode: 6009692190352</p>
+                </div>
+
+                <div class = "col-lg-3 column2">
+                    <img src = "pics/productrange_pics/vitalifebread_pics/VitaBrown_New.jpg" onmouseover = "newVitaLifeBreadTwo()" onmouseout = "oldVitaLifeBreadTwo()" id = "secondVitaLifeBread">
+                    <h5>Vita-Life Brown Bread 700g</h5>
+                    <p>Barcode: 6009692190475</p>
+                </div>
+
+                <div class = "col-lg-3 column3">
+                    <img src = "pics/productrange_pics/vitalifebread_pics/VitaWhite_New.jpg" onmouseover = "newVitaLifeBreadThree()" onmouseout = "oldVitaLifeBreadThree()" id = "thirdVitaLifeBread">
+                    <h5>Vita-Life White Bread 700g</h5>
+                    <p>Barcode: 6009692190468</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--CONTACT DETAILS AND ADDRESS-->
+
+        <div class = "contact-details">
+
+            <div class = "row">
+
+                <div class = "col-lg-5 spoonpart">
+                    <img src = "pics/homepage_pics/spoon.png"  alt = "">
+                    <p>
+                        Customer Care Line: 086 0103 764.<br>
+                        Website: www.rclfoods.com<br>
+                        Packed for <b>RCL Foods</b> Ltd.<br>
+                        TEN THE BOULEVARD, WESTWAY<br>
+                        OFFICE PARK, WESTVILLE, 3629.
+                    </p>
+                </div>
+
+                <div class = "col-lg-6 sitemap">
+
+                    <p>Sitemap : </p>
+
+                    <ul class = "navbar-nav">
+
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "index.html">Home</a>
+                        </li>
+    
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "AboutUs.html">About Us</a>
+                        </li>
+
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "ProductRange.html">Product Range</a>
+                        </li>
+
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "Recipes.html">Recipes</a>
+                        </li>
+
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "Downloads.html">Downloads</a>
+                        </li>
+
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "Bakeries.html">Bakeries</a>
+                        </li>
+
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "Competitions.html">Competitions</a>
+                        </li>
+
+                        <li class = "nav-item">
+                            <a class = "nav-link" href = "https://rclfoods.com/careeropportunities/">Careers</a>
+                        </li>
+
+                        <li class = "nav-item">
+                            <a class = "nav-link no-line" href = "ContactUs.html">Contact Us</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src = "javascriptfile.js"></script>
+    <script src = "changeimages.js"></script>
+    <script src = "toggleButton.js"></script>
+
+</body>
+
+</html>
