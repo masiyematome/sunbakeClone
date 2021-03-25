@@ -3,20 +3,25 @@
 //Selectors
 
 const productRangeBreads = document.querySelectorAll(".product-range-bread");
-let index;
+let index = 0;
 
 /**Functions **/
 
 function getImages(originalImages,hoverImages){
 
-    for(index = 0; index < productRangeBreads.length-1 ; index++){
-        productRangeBreads[index].children[0].addEventListener("mouseover" , function() {
+    const productRangeBreadsArray = Array.from(productRangeBreads);
+
+    for(index; index < productRangeBreadsArray.length ; index++){
+
+        const breadImage = productRangeBreadsArray[index].children[0];
+        
+        breadImage.addEventListener("mouseover" , function() {
             this.style.cursor = "pointer";
-            this.src = hoverImages[index].image;
+            breadImage.src = hoverImages[index].image;
         });
 
-        productRangeBreads[index].children[0].addEventListener("mouseout" , function() {
-            this.src = originalImages[index].image;
+        breadImage.addEventListener("mouseout" , function() {
+            breadImage.src = originalImages[index].image;
         });
 
     }
@@ -25,7 +30,7 @@ function getImages(originalImages,hoverImages){
 function setImages(){
      originalImages_ = [
         {
-            image:"pics/productrange_pics/everyday700.jpg" ,
+            image: "pics/productrange_pics/everyday700.jpg" ,
         },
         {
             image: "pics/productrange_pics/unsliced_NEW.jpg",
@@ -53,10 +58,10 @@ function setImages(){
         },
         {
             image: "pics/productrange_pics/farmstylewhite600.jpg",
-        }
+        },
     ];
 
-     hoverImages_ = [
+    hoverImages_ = [
         
             {
                 image: "pics/productrange_pics/brown-bread-700.png" ,
@@ -87,16 +92,15 @@ function setImages(){
             },
             {
                 image: "pics/productrange_pics/farmstyle-white-bread-600.png",
-            }
+            },
     ];
 
     getImages(originalImages_ , hoverImages_);
+    console.log(originalImages_);
 
 }
 
 setImages();
-
-
 
 
 // /***First image script ***/
