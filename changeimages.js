@@ -2,7 +2,8 @@
 
 //Selectors
 
-const productRangeBreads = document.querySelectorAll(".product-range-bread");
+const breads = document.querySelectorAll(".bread");
+
 
 /**Functions**/
 
@@ -10,25 +11,25 @@ const productRangeBreads = document.querySelectorAll(".product-range-bread");
 
 function getImages(originalImages,hoverImages){
 
-    const productRangeBreadsArray = Array.from(productRangeBreads);
+    const breadsArray = Array.from(breads);
 
-    productRangeBreadsArray.forEach((productBread) => {
+    breadsArray.forEach((bread) => {
 
-        const productBreadImage = productBread.children[0];
-        const productBreadIndex = productRangeBreadsArray.indexOf(productBread);
+        const breadImage = bread.children[0];
+        const breadIndex = breadsArray.indexOf(bread);
 
 
-        productBread.addEventListener("mouseover" , ()=>{
+        bread.addEventListener("mouseover" , ()=>{
 
-            productBread.style.cursor = "pointer";
-            productBreadImage.src = hoverImages[productBreadIndex].image;
+            bread.style.cursor = "pointer";
+            breadImage.src = hoverImages[breadIndex].image;
 
         });
 
-        productBread.addEventListener("mouseout" , ()=>{
+        bread.addEventListener("mouseout" , ()=>{
 
-            productBread.style.cursor = "pointer";
-            productBreadImage.src = originalImages[productBreadIndex].image;
+            bread.style.cursor = "pointer";
+            breadImage.src = originalImages[breadIndex].image;
 
         });
     });
@@ -37,8 +38,8 @@ function getImages(originalImages,hoverImages){
 
 /*Function that contains an array of product range images*/
 
-function setImages(){
-     originalImages_ = [
+function setProductRangeImages(){
+     originalProductRangeImages_ = [
         {
             image: "pics/productrange_pics/everyday700.jpg" ,
         },
@@ -71,7 +72,7 @@ function setImages(){
         },
     ];
 
-    hoverImages_ = [
+    hoverProductRangeImages_ = [
         
             {
                 image: "pics/productrange_pics/brown-bread-700.png" ,
@@ -105,56 +106,52 @@ function setImages(){
             },
     ];
 
-    getImages(originalImages_ , hoverImages_);
+    getImages(originalProductRangeImages_ , hoverProductRangeImages_);
 
 }
 
-setImages();
+setProductRangeImages();
 
+/*Function that contains an array of buns and rolls images*/
 
+function setBunsAndRollsImages(){
+    originalBunsAndRollsImages_ = [
+       {
+           image: "pics/productrange_pics/hamburger-2.jpg" ,
+       },
+       {
+           image: "pics/productrange_pics/hotdog-1.jpg",
+       },
+       {
+           image: "pics/productrange_pics/lunchbuns-1.jpg",
+       },
+       {
+           image: "pics/productrange_pics/megahamburger-1.jpg",
+       },
+      
+   ];
 
-// /***BUNS AND ROLLS SCRIPT***/
+   hoverBunsAndRollsImages_ = [
+       
+           {
+               image: "pics/productrange_pics/hamburger-buns.png",
+           },
+           {
+               image: "pics/productrange_pics/hot-dog-rolls.png",
+           },
+           {
+               image: "pics/productrange_pics/lunch_buns.png",
+           },
+           {
+               image: "pics/productrange_pics/sesame-seeds-hamburger.png",
+           },
+   ];
 
+   getImages(originalBunsAndRollsImages_ , hoverBunsAndRollsImages_);
 
-// /***First bun script ***/
+}
 
-// function setNewBunOne(){
-//     var newFirstBun = document.getElementById("firstBun").src = "pics/productrange_pics/hamburger-buns.png";
-// }
-
-// function setOldBunOne(){
-//     var oldFirstBun = document.getElementById("firstBun").src = "pics/productrange_pics/hamburger-2.jpg";
-// }
-
-// /***Second bun script ***/
-
-// function setNewBunTwo(){
-//     var newSecondBun = document.getElementById("secondBun").src = "pics/productrange_pics/hot-dog-rolls.png";
-// }
-
-// function setOldBunTwo(){
-//     var oldSecondBun = document.getElementById("secondBun").src = "pics/productrange_pics/hotdog-1.jpg";
-// }
-
-// /***Third bun script ***/
-
-// function setNewBunThree(){
-//     var newThirdBun = document.getElementById("thirdBun").src = "pics/productrange_pics/lunch_buns.png";
-// }
-
-// function setOldBunThree(){
-//     var oldThirdBun = document.getElementById("thirdBun").src = "pics/productrange_pics/lunchbuns-1.jpg";
-// }
-
-// /***Fourth bun script ***/
-
-// function setNewBunFour(){
-//     var newFourthBun = document.getElementById("fourthBun").src = "pics/productrange_pics/sesame-seeds-hamburger.png";
-// }
-
-// function setOldBunFour(){
-//     var oldFourthBun = document.getElementById("fourthBun").src = "pics/productrange_pics/megahamburger-1.jpg";
-// }
+setBunsAndRollsImages();
 
 
 // /*******VITA LIFE BUNS SCRIPT STARTS HERE*******/
