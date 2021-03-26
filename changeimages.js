@@ -4,6 +4,7 @@
 
 const breads = document.querySelectorAll(".bread");
 
+console.log(location.pathname);
 
 /**Functions**/
 
@@ -110,8 +111,6 @@ function setProductRangeImages(){
 
 }
 
-setProductRangeImages();
-
 /*Function that contains an array of buns and rolls images*/
 
 function setBunsAndRollsImages(){
@@ -151,8 +150,6 @@ function setBunsAndRollsImages(){
 
 }
 
-setBunsAndRollsImages();
-
 /*Function that contains an array of vita life buns images*/
 
 function setVitaLifeBunsImages(){
@@ -180,8 +177,6 @@ function setVitaLifeBunsImages(){
    getImages(originalVitaLifeBunsImages_ , hoverVitaLifeBunsImages_);
 
 }
-
-setVitaLifeBunsImages();
 
 /*Function that contains an array of treats buns images*/
 
@@ -223,8 +218,6 @@ function setTreatsBunsImages(){
 
 }
 
-setTreatsBunsImages();
-
 /*Function that contains an array of vita-life bread images*/
 
 function setVitaLifeBreadImages(){
@@ -259,10 +252,32 @@ function setVitaLifeBreadImages(){
 
 }
 
-setVitaLifeBreadImages();
+function runFunctions(){
+    let pagePathName = location.pathname;
 
+    if(pagePathName == "/sunbakeClone/ProductRange.html"){
+        setProductRangeImages();
+    }
 
+    else if (pagePathName == "/sunbakeClone/BreadVitaLifeRange.html") {
+        setVitaLifeBreadImages();
+    }
 
+    else if (pagePathName == "/sunbakeClone/BunsAndRolls.html") {
+        setBunsAndRollsImages();
+    }
+
+    else if(pagePathName == "/sunbakeClone/BunsTreatsRange.html"){
+        setTreatsBunsImages();
+    }
+
+    else if (pagePathName == "/sunbakeClone/BunsVitaLifeRange.html") {
+        setVitaLifeBunsImages();
+    }
+
+}
+
+runFunctions();
 
 
 
