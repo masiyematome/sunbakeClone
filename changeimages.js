@@ -153,105 +153,113 @@ function setBunsAndRollsImages(){
 
 setBunsAndRollsImages();
 
+/*Function that contains an array of vita life buns images*/
 
-// /*******VITA LIFE BUNS SCRIPT STARTS HERE*******/
+function setVitaLifeBunsImages(){
+    originalVitaLifeBunsImages_ = [
+       {
+           image: "pics/productrange_pics/vitalifebuns_pics/2seeded.jpg" ,
+       },
+       {
+           image: "pics/productrange_pics/vitalifebuns_pics/seededcocktail.jpg",
+       },
+      
+   ];
 
-// /****First vita life bun script ****/
+   hoverVitaLifeBunsImages_ = [
+       
+           {
+               image: "pics/productrange_pics/vitalifebuns_pics/large-nutritional.png",
+           },
+           {
+               image: "pics/productrange_pics/vitalifebuns_pics/seeded-nutritional.png",
+           },
+      
+   ];
 
-// function newVitaLifeBunOne(){
-//     var newVitaLifeBunOne = document.getElementById("firstVitaLifeBun").src = "pics/productrange_pics/vitalifebuns_pics/large-nutritional.png";
-// }
+   getImages(originalVitaLifeBunsImages_ , hoverVitaLifeBunsImages_);
 
-// function oldVitaLifeBunOne(){
-//     var oldVitaLifeBunOne = document.getElementById("firstVitaLifeBun").src = "pics/productrange_pics/vitalifebuns_pics/2seeded.jpg";
-// }
+}
 
-// /****Second vita life bun script ****/
+setVitaLifeBunsImages();
 
-// function newVitaLifeBunTwo(){
-//     var newVitaLifeBunTwo = document.getElementById("secondVitaLifeBun").src = "pics/productrange_pics/vitalifebuns_pics/seeded-nutritional.png";
+/*Function that contains an array of treats buns images*/
 
-// }
+function setTreatsBunsImages(){
+    originalTreatsBunsImages_ = [
+        {
+            image: "pics/productrange_pics/treatsbuns_pics/hotcross-1.jpg",
+        },
+        {
+            image: "pics/productrange_pics/treatsbuns_pics/chocolatecross.jpg",
+        },
+        {
+            image: "pics/productrange_pics/treatsbuns_pics/fruitbuns.jpg",
+        },
+        {
+            image: "pics/productrange_pics/treatsbuns_pics/cheesetreats.jpg",
+        },
 
-// function oldVitaLifeBunTwo(){
-//     var oldVitaLifeBunTwo = document.getElementById("secondVitaLifeBun").src = "pics/productrange_pics/vitalifebuns_pics/seededcocktail.jpg";
-// }
+   ];
 
-// /*******TREATS BUNS SCRIPT STARTS HERE*******/
+   hoverTreatsBunsImages_ = [
+       
+       {
+           image: "pics/productrange_pics/treatsbuns_pics/hot-cross-buns.png",
+       },
+       {
+           image: "pics/productrange_pics/treatsbuns_pics/chocolate-hotcross-nutritional.png",
+       },
+       {
+           image: "pics/productrange_pics/treatsbuns_pics/6-fruit-buns-1-o.png",
+       },
+       {
+           image: "pics/productrange_pics/treatsbuns_pics/6-cheese-rolls-1-o.png",
+       },
+      
+   ];
 
-// /****First treats bun script ****/
+   getImages(originalTreatsBunsImages_ , hoverTreatsBunsImages_);
 
-// function newTreatsBunOne(){
-//     var newTreatsBunOne = document.getElementById("firstTreatsBun").src = "pics/productrange_pics/treatsbuns_pics/hot-cross-buns.png";
-// }
+}
 
-// function oldTreatsBunOne(){
-//     var oldTreatsBunOne = document.getElementById("firstTreatsBun").src = "pics/productrange_pics/treatsbuns_pics/hotcross-1.jpg";
-// }
+setTreatsBunsImages();
 
-// /****second treats bun script ****/
+/*Function that contains an array of vita-life bread images*/
 
-// function newTreatsBunTwo(){
-//     var newTreatsBunTwo = document.getElementById("secondTreatsBun").src = "pics/productrange_pics/treatsbuns_pics/chocolate-hotcross-nutritional.png";
-// }
+function setVitaLifeBreadImages(){
+    originalVitaLifeBreadImages_ = [
+        {
+            image: "pics/productrange_pics/vitalifebread_pics/VitaWheat_New.jpg",
+        },
+        {
+            image: "pics/productrange_pics/vitalifebread_pics/VitaBrown_New.jpg",
+        },
+        {
+            image: "pics/productrange_pics/vitalifebread_pics/VitaWhite_New.jpg",
+        },
 
-// function oldTreatsBunTwo(){
-//     var oldTreatsBunTwo = document.getElementById("secondTreatsBun").src = "pics/productrange_pics/treatsbuns_pics/chocolatecross.jpg";
-// }
+   ];
 
-// /****third treats bun script ****/
+   hoverVitaLifeBreadImages_ = [
+       
+       {
+           image: "pics/productrange_pics/vitalifebread_pics/crushed-wheat700.png",
+       },
+       {
+           image: "pics/productrange_pics/vitalifebread_pics/vita-brown.png",
+       },
+       {
+           image: "pics/productrange_pics/vitalifebread_pics/vita-white.png",
+       },
+      
+   ];
 
-// function newTreatsBunThree(){
-//     var newTreatsBunThree = document.getElementById("thirdTreatsBun").src = "pics/productrange_pics/treatsbuns_pics/6-fruit-buns-1-o.png";
-// }
+   getImages(originalVitaLifeBreadImages_ , hoverVitaLifeBreadImages_);
 
-// function oldTreatsBunThree(){
-//     var oldTreatsBunThree = document.getElementById("thirdTreatsBun").src = "pics/productrange_pics/treatsbuns_pics/fruitbuns.jpg";
-// }
+}
 
-// /****fourth treats bun script ****/
-
-// function newTreatsBunFour(){
-//     var newTreatsBunThree = document.getElementById("fourthTreatsBun").src = "pics/productrange_pics/treatsbuns_pics/6-cheese-rolls-1-o.png";
-// }
-
-// function oldTreatsBunFour(){
-//     var oldTreatsBunFour = document.getElementById("fourthTreatsBun").src = "pics/productrange_pics/treatsbuns_pics/cheesetreats.jpg";
-// }
-
-// /*******VITA-LIFE BREAD SCRIPT STARTS HERE*******/
-
-// /****First vital life script ****/
-
-// function newVitaLifeBreadOne(){
-//     var newVitalBreadOne = document.getElementById("firstVitaLifeBread").src = "pics/productrange_pics/vitalifebread_pics/crushed-wheat700.png";
-// }
-
-// function oldVitaLifeBreadOne(){
-//     var oldVitalBreadOne = document.getElementById("firstVitaLifeBread").src = "pics/productrange_pics/vitalifebread_pics/VitaWheat_New.jpg";
-// }
-
-// /****second vital life script ****/
-
-// function newVitaLifeBreadTwo(){
-//     var newVitalBreadTwo = document.getElementById("secondVitaLifeBread").src = "pics/productrange_pics/vitalifebread_pics/vita-brown.png";
-// }
-
-// function oldVitaLifeBreadTwo(){
-//     var oldVitalBreadTwo = document.getElementById("secondVitaLifeBread").src = "pics/productrange_pics/vitalifebread_pics/VitaBrown_New.jpg";
-// }
-
-// /****third vital life script ****/
-
-// function newVitaLifeBreadThree(){
-//     var newVitalBreadThree = document.getElementById("thirdVitaLifeBread").src = "pics/productrange_pics/vitalifebread_pics/vita-white.png";
-// }
-
-// function oldVitaLifeBreadThree(){
-//     var oldVitalBreadThree = document.getElementById("thirdVitaLifeBread").src = "pics/productrange_pics/vitalifebread_pics/VitaWhite_New.jpg";
-// }
-
-
+setVitaLifeBreadImages();
 
 
 
