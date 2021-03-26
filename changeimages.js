@@ -3,29 +3,39 @@
 //Selectors
 
 const productRangeBreads = document.querySelectorAll(".product-range-bread");
-let index = 0;
 
-/**Functions **/
+/**Functions**/
+
+/*Function for switching product range images*/
 
 function getImages(originalImages,hoverImages){
 
     const productRangeBreadsArray = Array.from(productRangeBreads);
 
-    for(index; index < productRangeBreadsArray.length ; index++){
+    productRangeBreadsArray.forEach((productBread) => {
 
-        const breadImage = productRangeBreadsArray[index].children[0];
-        
-        breadImage.addEventListener("mouseover" , function() {
-            this.style.cursor = "pointer";
-            breadImage.src = hoverImages[index].image;
+        const productBreadImage = productBread.children[0];
+        const productBreadIndex = productRangeBreadsArray.indexOf(productBread);
+
+
+        productBread.addEventListener("mouseover" , ()=>{
+
+            productBread.style.cursor = "pointer";
+            productBreadImage.src = hoverImages[productBreadIndex].image;
+
         });
 
-        breadImage.addEventListener("mouseout" , function() {
-            breadImage.src = originalImages[index].image;
-        });
+        productBread.addEventListener("mouseout" , ()=>{
 
-    }
+            productBread.style.cursor = "pointer";
+            productBreadImage.src = originalImages[productBreadIndex].image;
+
+        });
+    });
+    
 }
+
+/*Function that contains an array of product range images*/
 
 function setImages(){
      originalImages_ = [
@@ -96,109 +106,12 @@ function setImages(){
     ];
 
     getImages(originalImages_ , hoverImages_);
-    console.log(originalImages_);
 
 }
 
 setImages();
 
 
-// /***First image script ***/
-
-// function setNewImageOne(){
-//     var newImage1 = document.getElementById("image1").src = "pics/productrange_pics/brown-bread-700.png";
-// }
-
-// function setOldImageOne(){
-//     var oldImage1 = document.getElementById("image1").src = "pics/productrange_pics/everyday700.jpg";
-// }
-
-// /***Second image script ***/
-
-// function setNewImageTwo(){
-//     var newImage2 = document.getElementById("image2").src = "pics/productrange_pics/brown-unsliced-bread-700.png";
-// }
-
-// function setOldImageTwo(){
-//     var oldImage2 = document.getElementById("image2").src = "pics/productrange_pics/unsliced_NEW.jpg";
-// }
-
-// /***Third image script ***/
-
-// function setNewImageThree(){
-//     var newImage3 = document.getElementById("image3").src = "pics/productrange_pics/brown-bread-600g.png";
-// }
-
-// function setOldImageThree(){
-//     var oldImage3 = document.getElementById("image3").src = "pics/productrange_pics/everyday600g.jpg";
-// }
-
-// /***Fourth image script ***/
-
-// function setNewImageFour(){
-//     var newImage4 = document.getElementById("image4").src = "pics/productrange_pics/white-bread-700.png";
-// }
-
-// function setOldImageFour(){
-//     var oldImage4 = document.getElementById("image4").src = "pics/productrange_pics/everydaywhite700.jpg";
-// }
-
-// /***Fifth image script ***/
-
-// function setNewImageFive(){
-//     var newImage5 = document.getElementById("image5").src = "pics/productrange_pics/white-unsliced-bread-700.png";
-// }
-
-// function setOldImageFive(){
-//     var oldImage5 = document.getElementById("image5").src = "pics/productrange_pics/everydaywhiteunsliced.jpg";
-// }
-// /***Sixth image script ***/
-
-// function setNewImageSix(){
-//     var newImage6 = document.getElementById("image6").src = "pics/productrange_pics/white-bread-600.png";
-// }
-
-// function setOldImageSix(){
-//     var oldImage6 = document.getElementById("image6").src = "pics/productrange_pics/everydaywhite600.jpg";
-// }
-// /***Seventh image script ***/
-
-// function setNewImageSeven(){
-//     var newImage7 = document.getElementById("image7").src = "pics/productrange_pics/farmstyle-brown-bread.png";
-// }
-
-// function setOldImageSeven(){
-//     var oldImage7 = document.getElementById("image7").src = "pics/productrange_pics/farmstyle700.jpg";
-// }
-
-// /***Eighth image script ***/
-
-// function setNewImageEight(){
-//     var newImage8 = document.getElementById("image8").src = "pics/productrange_pics/farmstyle-brown-bread-600-1.png";
-// }
-
-// function setOldImageEight(){
-//     var oldImage8 = document.getElementById("image8").src = "pics/productrange_pics/farmstyle600.jpg";
-// }
-// /***Nineth image script ***/
-
-// function setNewImageNine(){
-//     var newImage9 = document.getElementById("image9").src = "pics/productrange_pics/farmstyle-whilte-bread-7001.png";
-// }
-
-// function setOldImageNine(){
-//     var oldImage9 = document.getElementById("image9").src = "pics/productrange_pics/farmstylewhite700.jpg";
-// }
-
-// /***Tenth image script ***/
-
-// function setNewImageTen(){
-//     var newImage10 = document.getElementById("image10").src = "pics/productrange_pics/farmstyle-white-bread-600.png";
-// }
-
-// function setOldImageTen(){
-//     var oldImage10 = document.getElementById("image10").src = "pics/productrange_pics/farmstylewhite600.jpg";
-// }
 
 // /***BUNS AND ROLLS SCRIPT***/
 
