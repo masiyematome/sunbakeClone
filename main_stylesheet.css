@@ -2,12 +2,12 @@
 
 *{
     box-sizing: border-box;
+    padding : 0;
+    margin : 0;
 }
 
 body{
-    width : 87%;
-    margin : auto;
-    padding : 0;
+    width : 100%;
 }
 
 
@@ -17,10 +17,18 @@ body{
 /*****NAVIGATIONBAR STYLING STARTS HERE*****/
 
 .navbar{
-    padding : 0px 100px 0px;
-    height : 118px;
-
     background-image: url("pics/general_pics/header.jpg");
+    display: flex;
+    flex-direction: column;
+    padding : 0px 15px 20px;
+}
+
+.navbar-links{
+    display : none;
+}
+
+.navbar-links.on-off{
+    display : block;
 }
 
 .navbar ul{
@@ -42,16 +50,17 @@ body{
 .navbar a{
     color : white;
     padding :5px;
-    font-weight : 500;
-    font-size : 18px;
-    font-family: 'Oswald', sans-serif;
+    font-weight : 600;
+    font-size : 14px;
+    font-family: 'Open Sans', sans-serif;
     text-decoration: none;
-    position : relative;
-    display: block;
 }
 
-.navbar .fa{
-    display : none;
+.navbar .mainMenu{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    padding : 15px 0px;
 }
 
 .navbar .mainMenu>li:hover a{
@@ -61,14 +70,10 @@ body{
     background-repeat: no-repeat;
 }
 
-.navbar .logoLink{
-    z-index : 1;
-}
-
 .navbar .logoLink a{
     padding : 0;
     z-index : 1;
-
+    display : none;
 
     -webkit-animation: opacity 2s;
     -moz-animation: opacity 2s;
@@ -93,20 +98,6 @@ body{
     background-image: none;
 }
 
-.navbar .mainMenu>li a::after{
-    content :'';
-    height : 50%;
-    border : 1px solid white;
-    position : absolute;
-    left : 100%;
-    top : 30%;
-    border-width : 1px;
-}
-
-.navbar li:nth-of-type(5) a::after ,.navbar li:nth-of-type(9) a::after{
-    content : none;
-}
-
 .navbar .mainMenu>li:hover a::after{
     border: 1px solid transparent;
 }
@@ -123,24 +114,20 @@ body{
     border : none;
     background-color : rgb(243, 67, 36);
     color : white;
-    padding : 3px 10px;
-    position : relative;
-    left : 50%;
-    transform : translateX(-50%);
-    display: none;
-    border-radius : 5px;
+    padding : 0px 5px;
+    border-radius : 4px;
+    transform: scale(1.5,1);
+    align-self: flex-end;
+    position: relative;
+    top : 10px;
+}
+
+.toggle-button.on-off{
+    background-color: black;
 }
 
 .navbar .toggle-button:focus{
     outline : none;
-}
-
-.navbar .toggle-button .fa{
-    transform: scale(1.5,1);
-}
-
-.navbar .title-bar{
-    display: none;
 }
 
 .navbar .subMenu{
@@ -200,7 +187,8 @@ body{
 
 .slideshow-container{
     position : relative;
-    height : 360px;
+    height : 112px;
+    width : 100%;
 }
 
 #slides{
@@ -326,11 +314,6 @@ body{
 
 /**SECOND SECTION STARTS HERE**/
 
-#pageproductsandcontactdetails{
-    position : relative;
-    margin-top : 5px;
-}
-
 .homepage-products h1{
     font-size : 25px;
     margin-bottom : 15px;
@@ -356,51 +339,15 @@ body{
     background-repeat: no-repeat;
 }
 
-.contact-details .row{
-    padding : 15px 15px 0px;
-    margin : 0px 69px;
-}
-
 .contact-details .spoonpart{
-    display: flex;
+    display : flex;
+    justify-content: space-between;
 }
 
-
-.contact-details p{
-    margin-left : 35px;
-    margin-top : 35px;
-    font-size : 13px;
-    padding : 5px 0px;
+.spoonpart p{
+    font-size : 12px;
     color : white;
-}
-
-.contact-details .sitemap{
-    padding : 0px 15px 0px
-}
-
-.contact-details .sitemap p{
-    font-size : 16px;
-    font-weight : 700;
-    color : #fff;
-}
-
-.contact-details .sitemap .navbar-nav{
-   display: block;
-   position: relative;
-   left : 25px;
-}
-
-.contact-details .sitemap .nav-link{
-    float : left;
-    margin-left : 10px;
-    color : #fff;
-    font-weight: 700;
-    padding-top : 0;
-    margin-top: 0;
-}
-
-.contact-details .sitemap .nav-link:hover{
-    text-decoration: underline;
+    padding : 5px;
 }
 
 .contact-details .sitemap .nav-link::after{
@@ -854,9 +801,10 @@ body{
     padding : 40px 100px 80px !important;
 }
 
-
 /*******MEDIA**********/
 /*******QUERIES********/
+
+/*
 
 @media (min-width : 990px) and (max-width : 1350px){
 
@@ -920,13 +868,16 @@ body{
 
 }
 
+*/
+
+/*
 @media (max-width : 1000px){
 
     body{
         width : 100%;
     }
 
-    /**NAVIGATION BAR STARTS HERE***/
+    *NAVIGATION BAR STARTS HERE**
 
     .navbar{
         display: flex;
@@ -1047,7 +998,9 @@ body{
         display : none;
     }
 
-    /***NAVIGATION BAR ENDS HERE****/
+    
+
+    **NAVIGATION BAR ENDS HERE***
 
     .slider{
         width : 80%;
@@ -1331,5 +1284,4 @@ body{
      }
 
 }
-
-
+*/

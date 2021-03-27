@@ -8,6 +8,8 @@ var slideInterval = setInterval(nextSlide,7000);
 var previous = document.getElementById("previous");
 var next = document.getElementById("next");
 
+/**Code for dropdown menus**/
+
 previous.onclick = function(){
     previouSlide();
 }
