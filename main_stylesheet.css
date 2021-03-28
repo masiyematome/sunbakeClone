@@ -658,6 +658,7 @@ body{
 
 .icons .fa{
     padding : 10px;
+    font-size : 1.8rem;
 }
 
 .icons .fa:focus{
@@ -666,19 +667,6 @@ body{
 
 .icons .fa:focus{
     border : 1px solid red;
-}
-
-.icons .fa-heart{
-    font-size :35px;
-}
-
-.icons .fa-home{
-    font-size : 40px;
-}
-
-.icons .fa-fighter-jet{
-    font-size : 45px;
-    transform: rotate(-45deg);
 }
 
 .iconName{
