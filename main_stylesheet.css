@@ -411,11 +411,14 @@ body{
 }
 
 .pageband{
-    padding : 15px 10px 10px 100px;
+    padding : 15px;
     background-image: url("pics/general_pics/band-background.jpg");
     background-position : center;
     background-size : cover;
     background-repeat: no-repeat;
+    color : white;
+    font-size : 20px;
+    text-align : center;
 }
 
 .pageband h1{
@@ -506,10 +509,22 @@ body{
 
 /*****CONTACT US PAGE STYLING STARTS HERE*****/
 
+.contact-us-body .row .image-container img{
+    width : 100%;
+    height: 411px;
+}
+
+.contact-us-body{
+    margin-top : 5px;
+}
+
+.contact-us-body .row{
+    padding : 40px 30px;
+}
+
 .contactuslist{
     list-style-type : none;
     position : relative;
-    top : 55px;
 }
 
 .contactuslist li{
@@ -536,25 +551,19 @@ body{
     border : 1px dashed #d71920;
 }
 
-.contactusform h3{
+.contact-us-form h3{
     color : #d71920;
     font-weight : bold;
     font-size : 24px;
-}
-
-.contactusform{
-    position : relative;
-    left : 20px;
-    padding : 0;
 }
 
 #contactform input{
     padding : 7px;
     border : none;
     margin : 0;
-    width : 120%;
     caret-color: grey;
     color : grey;
+    width : 100%;
 }
 
 #contactform input::placeholder{
@@ -581,7 +590,7 @@ body{
 }
 
 #contactform select{
-    width : 120%;
+    width : 100%;
     font-size : 15px;
     color : grey;
     padding : 5px;
@@ -595,7 +604,7 @@ body{
 }
 
 #contactform #address, #message{
-    width : 120%;
+    width : 100%;
     padding : 5px;
     margin-left : 2px;
     border : none;
@@ -603,10 +612,6 @@ body{
     height : 100px;
     caret-color: grey;
     color : grey;
-}
-
-#contactform #message{
-    margin-top : 0px;
 }
 
 #contactform #address::placeholder{
@@ -630,13 +635,11 @@ body{
 }
 
 #contactform .icons-container{
-    width : 110%;
-    height : 110px;
+    width : 100%;
     border : 1px solid #0059A9;
-    margin-left : 3px;
     padding : 10px;
-    position : relative;
-
+    display : flex;
+    flex-direction: column;
 }
 
 .icons-container p{
@@ -649,9 +652,8 @@ body{
 .icons {
     cursor : pointer;
     color: #0059a9;
-    position : absolute;
-    top : 20%;
-    left : 20%;
+    align-self: center;
+    
 }
 
 .icons .fa{
