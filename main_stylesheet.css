@@ -97,10 +97,6 @@ body{
     border: 1px solid transparent;
 }
 
-.navbar .active a{
-    color : yellow;
-}
-
 .navbar .active .subMenu a ,.navbar .active .superSubMenu a{
     color : white;
 }
@@ -368,6 +364,15 @@ body{
 /*****ABOUT PAGE STYLING STARTS HERE*****/
 /*****==============================*****/
 
+.aboutus-body {
+    margin-top : 5px;
+    padding : 40px 30px;
+}
+
+.aboutus-body .row > div img{
+    width : 100%;
+}
+
 .aboutus-body h1{
     color: #d71920;
     font-weight: 400;
@@ -378,10 +383,10 @@ body{
     font-family: 'Open Sans';
 }
 
-.aboutus-body .aboutusinfo{
-    position : relative;
-    top : 30px;
+.aboutus-body .about-us-info{
+    padding : 20px 0px 0px;
 }
+
 
 /*****PRODUCT RANGE STYLING STARTS HERE*****/
 
