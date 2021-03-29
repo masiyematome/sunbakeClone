@@ -38,20 +38,20 @@ const thirdIcon = document.querySelector(".third-icon");
 
 /**Functions for the icons on contact us page**/
 
-function appendIcons(iconsArray){
-    const randomFirstIcon = Math.floor((Math.random() * 5));
-    firstIcon.innerHTML = iconsArray[randomFirstIcon].icon;
+function appendIcons(firstIconsArray,secondIconsArray,thirdIconsArray){
+    let randomFirstIcon = Math.floor((Math.random() * firstIconsArray.length));
+    let randomSecondIcon = Math.floor((Math.random() * secondIconsArray.length));
+    let randomThirdIcon = Math.floor((Math.random() * thirdIconsArray.length));
 
-    const randomSecondIcon = Math.floor((Math.random() * 5));
-    secondIcon.innerHTML = iconsArray[randomSecondIcon].icon;
+    firstIcon.innerHTML = firstIconsArray[randomFirstIcon].icon;
+    secondIcon.innerHTML = secondIconsArray[randomSecondIcon].icon;
+    thirdIcon.innerHTML = thirdIconsArray[randomThirdIcon].icon;
 
-    const randomThirdIcon = Math.floor((Math.random() * 5));
-    thirdIcon.innerHTML = iconsArray[randomThirdIcon].icon;
-    
 }
 
 function setIcons(){
-    const icons = [
+
+    const firstIconsArray = [
         {
             icon : '<i class="fa fa-heart"></i>',
         },
@@ -59,21 +59,39 @@ function setIcons(){
             icon : '<i class="fa fa-home"></i>',
         },
         {
+            icon : '<i class="fa fa-tree"></i>',
+        },
+        {
+            icon : '<i class="fa fa-star"></i>',
+        },
+    ];
+
+    const secondIconsArray = [
+        {
             icon : '<i class="fa fa-fighter-jet"></i>',
         },
         {
             icon : '<i class="fa fa-car"></i>',
         },
         {
+            icon : '<i class="fa fa-flag"></i>',
+        },
+    ];
+
+    const thirdIconsArray = [
+        {
             icon : '<i class="fa fa-mug-hot"></i>'
         },
         {
-            icon : '<i class="fa fa-fighter-jet"></i>',
+            icon : '<i class="fa fa-truck"></i>',
         },
-       
-    ]
+        {
+            icon : '<i class="fa fa-key"></i>',
+        },
+    ];
 
-    appendIcons(icons);
+    appendIcons(firstIconsArray,secondIconsArray,thirdIconsArray);
+
 }
 
 setIcons();
