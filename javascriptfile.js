@@ -12,6 +12,7 @@ const secondIcon = document.querySelector(".second-icon");
 const thirdIcon = document.querySelector(".third-icon");
 const iconName = document.querySelector(".icon-name");
 const icons = document.querySelector(".icons");
+const iconErrorText = document.querySelector(".icon-error-text");
 
 /**Code for dropdown menus**/
 
@@ -40,7 +41,7 @@ const icons = document.querySelector(".icons");
 
 /**Functions for the icons on contact us page**/
 
-function appendIcons(firstIconsArray,secondIconsArray,thirdIconsArray){
+function appendIcons(firstIconsArray, secondIconsArray, thirdIconsArray) {
     let randomFirstIcon = Math.floor((Math.random() * firstIconsArray.length));
     let randomSecondIcon = Math.floor((Math.random() * secondIconsArray.length));
     let randomThirdIcon = Math.floor((Math.random() * thirdIconsArray.length));
@@ -59,72 +60,110 @@ function appendIcons(firstIconsArray,secondIconsArray,thirdIconsArray){
     const selectedIcon = iconNamesArray[randomIconIndex];
     const indexOfSelectedIcon = iconNamesArray.indexOf(selectedIcon);
 
-    if(indexOfSelectedIcon == 0){
+    if (indexOfSelectedIcon == 0) {
         iconName.innerText = firstIconName;
     }
 
-    else if(indexOfSelectedIcon == 1){
+    else if (indexOfSelectedIcon == 1) {
         iconName.innerText = secondIconName;
     }
 
-    else{
+    else {
         iconName.innerText = thirdIconName;
     }
 
+
+    iconNamesArray.forEach((icon) => {
+
+        icon.addEventListener("click", () => {
+            const iconIndex = iconNamesArray.indexOf(icon);
+            let iconNameOnIndex;
+
+            if (iconIndex == 0) {
+                iconNameOnIndex = firstIconName;
+            }
+
+            else if (iconIndex == 1) {
+                iconNameOnIndex = secondIconName;
+            }
+
+            else {
+                iconNameOnIndex = thirdIconName;
+            }
+
+            if (iconName.innerText == iconNameOnIndex) {
+
+                iconErrorText.classList.add("displaying");
+                iconErrorText.innerText = "You clicked on the correct icon";
+
+                setTimeout(() => {
+                    iconErrorText.classList.remove("displaying");
+                }, 3000)
+            }
+
+            else {
+                iconErrorText.classList.add("displaying");
+                iconErrorText.innerText = "You clicked on the wrong icon,please try again";
+            }
+
+        })
+
+    })
+
 }
 
-function setIcons(){
+function setIcons() {
 
     const firstIconsArray = [
         {
-            nameOfIcon : "heart",
-            icon : '<i class="fa fa-heart"></i>',
+            nameOfIcon: "heart",
+            icon: '<i class="fa fa-heart"></i>',
         },
         {
-            nameOfIcon : "house",
-            icon : '<i class="fa fa-home"></i>',
+            nameOfIcon: "house",
+            icon: '<i class="fa fa-home"></i>',
         },
         {
-            nameOfIcon : "tree",
-            icon : '<i class="fa fa-tree"></i>',
+            nameOfIcon: "tree",
+            icon: '<i class="fa fa-tree"></i>',
         },
         {
-            nameOfIcon : "star",
-            icon : '<i class="fa fa-star"></i>',
+            nameOfIcon: "star",
+            icon: '<i class="fa fa-star"></i>',
         },
     ];
 
     const secondIconsArray = [
         {
-            nameOfIcon : "fighter-jet",
-            icon : '<i class="fa fa-fighter-jet"></i>',
+            nameOfIcon: "fighter-jet",
+            icon: '<i class="fa fa-fighter-jet"></i>',
         },
         {
-            nameOfIcon : "car",
-            icon : '<i class="fa fa-car"></i>',
+            nameOfIcon: "car",
+            icon: '<i class="fa fa-car"></i>',
         },
         {
-            nameOfIcon : "flag",
-            icon : '<i class="fa fa-flag"></i>',
+            nameOfIcon: "flag",
+            icon: '<i class="fa fa-flag"></i>',
         },
     ];
 
     const thirdIconsArray = [
         {
-            nameOfIcon : "mug-hot",
-            icon : '<i class="fa fa-mug-hot"></i>'
+            nameOfIcon: "mug-hot",
+            icon: '<i class="fa fa-mug-hot"></i>'
         },
         {
-            nameOfIcon : "truck",
-            icon : '<i class="fa fa-truck"></i>',
+            nameOfIcon: "truck",
+            icon: '<i class="fa fa-truck"></i>',
         },
         {
-            nameOfIcon : "key",
-            icon : '<i class="fa fa-key"></i>',
+            nameOfIcon: "key",
+            icon: '<i class="fa fa-key"></i>',
         },
     ];
 
-    appendIcons(firstIconsArray,secondIconsArray,thirdIconsArray);
+    appendIcons(firstIconsArray, secondIconsArray, thirdIconsArray);
 
 }
 

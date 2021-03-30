@@ -674,6 +674,15 @@ body{
     font-weight : 600;
 }
 
+.icon-error-text{
+    color : red;
+    display : none;
+}
+
+.icon-error-text.displaying{
+    display : block;
+}
+
 .submitForm{
     margin-left : 3px;
     padding : 10px;
