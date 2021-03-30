@@ -2,9 +2,8 @@
 
 /*** SLIDESHOW SCRIPT CODE ***/
 
+
 var slides = document.querySelectorAll(".slide");
-var currentSlide = 0;
-// var slideInterval = setInterval(nextSlide,7000);
 var previous = document.getElementById("previous");
 var next = document.getElementById("next");
 const firstIcon = document.querySelector(".first-icon");
@@ -14,30 +13,43 @@ const iconName = document.querySelector(".icon-name");
 const icons = document.querySelector(".icons");
 const iconErrorText = document.querySelector(".icon-error-text");
 
-/**Code for dropdown menus**/
+/**Code for slideshow**/
 
-// previous.onclick = function(){
-//     previouSlide();
-// }
+/**Run this code only when at the index page**/
 
-// next.onclick = function(){
-//     nextSlide();
-// }
+if(location.pathname == "/sunbakeClone/index.html"){
+    
+    var currentSlide = 0;
+    var slideInterval = setInterval(nextSlide, 7000);
 
-// function previouSlide(){
-//     goToSlide(currentSlide - 1);
-// }
+    previous.onclick = function(){
+        previouSlide();
+    }
+    
+    next.onclick = function(){
+        nextSlide();
+    }
+    
+    function previouSlide(){
+        goToSlide(currentSlide - 1);
+    }
+    
+    
+    function nextSlide(){
+        goToSlide(currentSlide + 1);
+    }
+    
+    function goToSlide(theValue){
+        slides[currentSlide].className = "slide";
+        currentSlide = (theValue + slides.length)%slides.length;
+        slides[currentSlide].className = "slide showing";
+    }    
+}
+
+/**Run this code only when at the contact us page**/
 
 
-// function nextSlide(){
-//     goToSlide(currentSlide + 1);
-// }
-
-// function goToSlide(theValue){
-//     slides[currentSlide].className = "slide";
-//     currentSlide = (theValue + slides.length)%slides.length;
-//     slides[currentSlide].className = "slide showing";
-// }
+else if(location.pathname == "/sunbakeClone/ContactUs.html"){
 
 /**Functions for the icons on contact us page**/
 
@@ -168,6 +180,10 @@ function setIcons() {
 }
 
 setIcons();
+
+}
+
+
 
 
 

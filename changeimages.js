@@ -2,9 +2,9 @@
 
 //Selectors
 
-const breads = document.querySelectorAll(".bread");
+let pagePathName = location.pathname;
 
-console.log(location.pathname);
+const breads = document.querySelectorAll(".bread");
 
 /**Functions**/
 
@@ -253,7 +253,6 @@ function setVitaLifeBreadImages(){
 }
 
 function runFunctions(){
-    let pagePathName = location.pathname;
 
     if(pagePathName == "/sunbakeClone/ProductRange.html"){
         setProductRangeImages();
