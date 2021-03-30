@@ -11,18 +11,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
   <link rel = "stylesheet" href = "main_stylesheet.css">
 </head>
 
 <body>
 
-    <!--FIRST SECTION STARTS HERE-->
-
-<section id = "navigationbarandslider-section">
-
    <!--NAVIGATION BAR STARTS HERE-->
-  
    <nav class = "navbar">
 
     <div class = "title-bar">
@@ -30,7 +25,7 @@
     </div>
 
     <button class = "toggle-button">
-      <i class = "fa fa-bars"></i>
+      <i class = "fas fa-bars"></i>
     </button>
 
     <div class = "navbar-links">
@@ -44,7 +39,7 @@
 
         <!--Second dropdown menu starts here-->
 
-        <li><a href = "ProductRange.html">Product Range<i class = "fa fa-caret-right"></i></a>
+        <li><a href = "ProductRange.html" class = "dropable">Product Range</i></a>
 
           <!--First submenu starts here-->
         
@@ -89,11 +84,11 @@
         <li><a href = "Recipes.html">Recipes</a></li>
         <li class = "logoLink"><a href = "index.html"><img src = "pics/general_pics/logo.png"></a></li>
         <li><a href = "Downloads.html">Downloads</a></li>
-        <li class = "active"><a href = "Bakeries.html">Bakeries</a></li>
+        <li><a href = "Bakeries.html">Bakeries</a></li>
 
         <!--Second dropdown menu starts here-->
 
-        <li><a href = "#">Competitions<i class = "fa fa-caret-right"></i></a>
+        <li><a href = "#" class = "dropable">Competitions</a>
 
           <!---Second submenu starts here-->
 
@@ -120,70 +115,66 @@
           
         </div>
 
-    </section>
-
     <!--SECOND SECTION STARTS HERE-->
 
-    <section id = "pageproductsandcontactdetails">
 
-        <div class = "pageband">
-            <h1>Bakeries</h1>
-        </div>
+        
 
         <!--PRODUCT RANGE PRODUCTS DISPLAYED BELOW-->
 
-        <div class = "bakeries-body pagebody">
-
-            <p>Sunbake’s bread, buns and rolls range are manufactured in state of the art HACCP accredited facilities, in Limpopo,<br>
-               Gauteng, Mpumalanga and North West.
-            </p>
-
-            <hr class = "bakeries-line"></hr>
-
-            <div class = "row firstrow">
-
-                <div class = "col-lg-3">
-                    <h5>Benoni : </h5>
-                    <p>T: 011 748 5700</p>
-                </div>
-
-                <div class = "col-lg-3">
-                    <h5>Boerstra (Pretoria):</h5>
-                    <p>T: 012 327 0933</p>
-                </div>
-
-                <div class = "col-lg-3">
-                    <h5>Bushbuckridge:</h5>
-                    <p>T: 013 799 0261</p>
-                </div>
-
-                <div class = "col-lg-3">
-                    <h5>Nelspruit:</h5>
-                    <p>T: 013 752 2158</p>
-                </div>
-
+        <div class="bakeries-body pagebody">
+        
+            <h1 class="pageband">Contact Us</h1>
+        
+            <div class="bakeries-content">
+        
+                <p>Sunbake’s bread, buns and rolls range are manufactured in state of the art HACCP accredited facilities, in
+                    Limpopo,Gauteng, Mpumalanga and North West.
+                </p>
+        
+                <hr class="bakeries-line">
+                </hr>
+        
+                    <div>
+                        <h5>Benoni : </h5>
+                        <p>T: 011 748 5700</p>
+                    </div>
+        
+                    <div>
+                        <h5>Boerstra (Pretoria):</h5>
+                        <p>T: 012 327 0933</p>
+                    </div>
+        
+                    <div>
+                        <h5>Bushbuckridge:</h5>
+                        <p>T: 013 799 0261</p>
+                    </div>
+        
+                    <div>
+                        <h5>Nelspruit:</h5>
+                        <p>T: 013 752 2158</p>
+                    </div>
+        
+                    <div>
+                        <h5>Polokwane: </h5>
+                        <p>T: 015 298-8706</p>
+                    </div>
+        
+                    <div>
+                        <h5>Rustenburg: </h5>
+                        <p>T: 014 596 5371</p>
+                    </div>
+        
+                    <div>
+                        <h5>Tzaneen:</h5>
+                        <p>T: 015 307 5044</p>
+                    </div>
+        
             </div>
-
-            <div class = "row secondrow">
-
-                <div class = "col-lg-3">
-                    <h5>Polokwane: </h5>
-                    <p>T: 015 298-8706</p>
-                </div>
-
-                <div class = "col-lg-3">
-                    <h5>Rustenburg: </h5>
-                    <p>T: 014 596 5371</p>
-                </div>
-
-                <div class = "col-lg-3">
-                    <h5>Tzaneen:</h5>
-                    <p>T: 015 307 5044</p>
-                </div>
-
-            </div>
-
+        
         </div>
+
+            
 
         <!--CONTACT DETAILS AND ADDRESS-->
 
@@ -191,8 +182,8 @@
 
             <div class = "row">
 
-                <div class = "col-lg-5 spoonpart">
-                    <img src = "pics/homepage_pics/spoon.png"  alt = "">
+                <div class = "spoonpart">
+                    <img src = "pics/homepage_pics/spoon.png" alt = "">
                     <p>
                         Customer Care Line: 086 0103 764.<br>
                         Website: www.rclfoods.com<br>
@@ -202,7 +193,7 @@
                     </p>
                 </div>
 
-                <div class = "col-lg-6 sitemap">
+                <div class = "sitemap">
 
                     <p>Sitemap : </p>
 
@@ -251,8 +242,6 @@
             </div>
 
         </div>
-
-    </section>
 
     <script src = "javascriptfile.js"></script>
     <script src = "changeimages.js"></script>

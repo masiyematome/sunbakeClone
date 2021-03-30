@@ -442,23 +442,35 @@ body{
 
 /***BAKERIES PAGE STYLING STARTS HERE***/
 
-.bakeries-body p{
+.bakeries-body{
+    margin-top : 5px;
+}
+
+.bakeries-content{
+    padding : 40px 30px;
+}
+
+.bakeries-content p{
     color: #0059a9;
     font-size : 16px;
     font-weight : 400;
     font-family: 'open Sans';
+    margin : 0;
+}
+
+.bakeries-content > div{
+    padding : 10px 0px;
 }
 
 .bakeries-body .bakeries-line{
     border-color: #0059a9;
-    position : relative;
-    margin : 25px 0px;
 }
 
 .bakeries-body h5{
     color : #d71920;
     font-weight: 700;
     font-size : 16px;
+    font-family: 'Open Sans';
 }
 
 /*****COMPETITIONS PAGE STYLING STARTS HERE*****/
