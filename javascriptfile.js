@@ -14,21 +14,6 @@ const icons = document.querySelector(".icons");
 const iconErrorText = document.querySelector(".icon-error-text");
 const dropableLinks = document.querySelectorAll(".dropable");
 const subMenus = document.querySelectorAll(".subMenu");
-const allLinks = document.querySelectorAll(".navbar a");
-
-
-allLinks.forEach((link) => {
-    
-    link.addEventListener("click" , (e)=> {
-
-        Array.from(allLinks).forEach((individualLink) => {
-            individualLink.classList.remove("link-background");
-        })
-
-        e.preventDefault();
-        link.classList.add("link-background");
-    })
-})
 
 /**Make dropable links clickable**/
 
