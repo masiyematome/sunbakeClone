@@ -25,6 +25,7 @@ body{
 
 .navbar-links{
     display : none;
+    width : 100%;
 }
 
 .navbar-links.on-off{
@@ -37,6 +38,11 @@ body{
     list-style-type : none;
 }
 
+.navbar ul li{
+    width : 100%;
+    text-align: center;
+}
+
 .navbar a{
     color : white;
     padding :5px;
@@ -44,11 +50,14 @@ body{
     font-size : 14px;
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
+    display: block;
 }
 
 .dropable::after,.navbar .subMenu > li a::after{
+    /* content : "\1F892"; */
     content : ">";
     padding : 0px 5px;
+    font-weight : 800;
 }
 
 .navbar .second > li a::after{
@@ -72,13 +81,6 @@ body{
 
 .navbar .mainMenu li{
     display: block;
-}
-
-a.link-background{
-    background-image : url("pics/general_pics/menu_1.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .navbar .logoLink a{
@@ -387,24 +389,44 @@ a.link-background{
 
 /*****PRODUCT RANGE STYLING STARTS HERE*****/
 
-
-.productrange-body h5,.bunsAndRolls-body h5,.vitaLifeBunsAndRolls-body h5 ,.treatsBunsAndRolls-body h5 ,.vitaLifeBread-body h5{
-    color : #d71920;
-    font-weight : 700;
-    padding-top : 10px;
-    font-size : 18px;
+.productrange-body{
+    margin-top : 5px;
 }
 
-.productrange-body p,.bunsAndRolls-body p ,.vitaLifeBunsAndRolls-body p,.treatsBunsAndRolls-body p ,.vitaLifeBread-body p{
-    position : absolute;
-    top : 98%;
-    color: #0059a9;
-    font-family: 'Open Sans';
+.breads{
+    padding : 40px 30px;
+}
+
+.breads > div {
+    display : grid;
+    grid-template-columns: repeat(2,0.5fr);
+    grid-column-gap: 10%;
+    padding : 10px 0px;
+}
+
+.bread{
+    text-align: center;
+    padding : 15px 0px;
+}
+
+.bread img{
+    width : 100%;
+}
+
+.bread h5{
+    font-size : 14px;
+    color : #d71920;
+    font-weight : 700;
+    margin : 0;
+    padding : 8px 0px;
+}
+
+.bread p{
     font-size : 16px;
 }
 
-.productrange-body .row{
-    padding : 30px;
+.bread h5,.bread p{
+    text-align : left;
 }
 
 .pageband{

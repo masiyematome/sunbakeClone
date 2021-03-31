@@ -13,7 +13,7 @@ const iconName = document.querySelector(".icon-name");
 const icons = document.querySelector(".icons");
 const iconErrorText = document.querySelector(".icon-error-text");
 const dropableLinks = document.querySelectorAll(".dropable");
-const superDropableLinks = document.querySelectorAll(".first > li a");
+const superDropableLinks = document.querySelectorAll(".first > li > a");
 const subMenus = document.querySelectorAll(".subMenu");
 const superSubMenus = document.querySelectorAll(".superSubMenu");
 
