@@ -46,9 +46,13 @@ body{
     text-decoration: none;
 }
 
-.dropable::after{
+.dropable::after,.navbar .subMenu > li a::after{
     content : ">";
     padding : 0px 5px;
+}
+
+.navbar .second > li a::after{
+    content : '';
 }
 
 .navbar .mainMenu{
@@ -58,7 +62,12 @@ body{
     padding : 15px 0px;
 }
 
-.navbar .mainMenu>li:hover a{
+
+.navbar .mainMenu li{
+    display: block;
+}
+
+a.link-background{
     background-image : url("pics/general_pics/menu_1.png");
     background-position: center;
     background-size: cover;
@@ -97,6 +106,19 @@ body{
     border: 1px solid transparent;
 }
 
+.navbar .subMenu{
+    text-align: center;
+    display : none;
+}
+
+.subMenu.subMenu-displaying{
+    display : block;
+}
+
+.dropdownDivider{
+    display : none;
+}
+
 .navbar .active .subMenu a ,.navbar .active .superSubMenu a{
     color : white;
 }
@@ -121,40 +143,6 @@ body{
     outline : none;
 }
 
-.navbar .subMenu{
-    position : absolute;
-    display : none;
-    background-image: url("pics/general_pics/menu_1.png");
-    z-index : 2;
-}
-
-.navbar .mainMenu>li:hover .subMenu{
-    display : block;
-}
-
-.navbar .mainMenu>li:nth-of-type(3) .subMenu{
-    width : 11.7%;
-}
-
-.navbar .mainMenu>li:nth-of-type(8) .subMenu{
-    width : 10.6%;
-}
-
-.navbar .mainMenu>li:hover .subMenu>li a{
-    background-image : none;
-}
-
-.navbar .mainMenu>li:hover .navbar a{
-    display : inline-block;
-}
-
-.navbar .subMenu a:hover{
-    color : yellow;
-}
-
-.navbar .subMenu li{
-    position : relative;
-}
 
 .navbar .superSubMenu{
     position : absolute;
@@ -521,13 +509,18 @@ body{
 
 /*****CONTACT US PAGE STYLING STARTS HERE*****/
 
-.contact-us-body .row .image-container img{
-    width : 100%;
-    height: 411px;
-}
 
 .contact-us-body{
     margin-top : 5px;
+}
+
+.contact-us-body .row .image-container{
+    padding : 0px 0px 20px;
+}
+
+.contact-us-body .row .image-container img{
+    width : 100%;
+    height: 411px;
 }
 
 .contact-us-body .row{
@@ -742,12 +735,22 @@ body{
 
 .downloads-body h5{
     font-weight : 600;
-    margin-top : 5px;
+    padding : 5px 0px 3px;
+    margin : 0;
 }
 
 /****RECIPES PAGE STYLING STARTS HERE****/
 
-.recipes-body h4{
+.recipes-body {
+    margin-top : 5px;
+}
+
+.recipes-container{
+    padding : 40px 30px;
+    min-height: 50vh;
+}
+
+.recipes-container h4{
     color : #d71920;
     text-align : center;
     font-family: 'open-sans';

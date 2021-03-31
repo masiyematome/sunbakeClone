@@ -12,6 +12,40 @@ const thirdIcon = document.querySelector(".third-icon");
 const iconName = document.querySelector(".icon-name");
 const icons = document.querySelector(".icons");
 const iconErrorText = document.querySelector(".icon-error-text");
+const dropableLinks = document.querySelectorAll(".dropable");
+const subMenus = document.querySelectorAll(".subMenu");
+const allLinks = document.querySelectorAll(".navbar a");
+
+
+allLinks.forEach((link) => {
+    
+    link.addEventListener("click" , (e)=> {
+
+        Array.from(allLinks).forEach((individualLink) => {
+            individualLink.classList.remove("link-background");
+        })
+
+        e.preventDefault();
+        link.classList.add("link-background");
+    })
+})
+
+/**Make dropable links clickable**/
+
+dropableLinks.forEach((dropableLink) => {
+    dropableLink.addEventListener("click" , (e)=> {
+        e.preventDefault();
+        
+        if(dropableLink.innerText == "Product Range"){
+            subMenus[0].classList.toggle("subMenu-displaying");
+        }
+
+        else if(dropableLink.innerText == "Competitions"){
+            subMenus[1].classList.toggle("subMenu-displaying");
+        }
+
+    })
+})
 
 /**Code for slideshow**/
 
