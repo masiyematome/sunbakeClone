@@ -122,6 +122,7 @@ a.link-background{
     display : block;
 }
 
+
 .dropdownDivider{
     display : none;
 }
@@ -152,14 +153,15 @@ a.link-background{
 
 
 .navbar .superSubMenu{
-    position : absolute;
-    top : 0;
-    transform : translateX(100%);
     display: none;
-    background-image: url("pics/general_pics/menu_2.png");
 }
 
-.navbar .subMenu>li:hover .superSubMenu{
+.navbar .superSubMenu > li a::after{
+    content : '';
+    text-align: center;
+}
+
+.superSubMenu.superSubMenu-displaying{
     display : block;
 }
 

@@ -13,20 +13,40 @@ const iconName = document.querySelector(".icon-name");
 const icons = document.querySelector(".icons");
 const iconErrorText = document.querySelector(".icon-error-text");
 const dropableLinks = document.querySelectorAll(".dropable");
+const superDropableLinks = document.querySelectorAll(".first > li a");
 const subMenus = document.querySelectorAll(".subMenu");
+const superSubMenus = document.querySelectorAll(".superSubMenu");
+
 
 /**Make dropable links clickable**/
 
 dropableLinks.forEach((dropableLink) => {
-    dropableLink.addEventListener("click" , (e)=> {
+    dropableLink.addEventListener("click" , (e) => {
         e.preventDefault();
         
         if(dropableLink.innerText == "Product Range"){
             subMenus[0].classList.toggle("subMenu-displaying");
+            
         }
 
         else if(dropableLink.innerText == "Competitions"){
             subMenus[1].classList.toggle("subMenu-displaying");
+        }
+
+    })
+})
+
+superDropableLinks.forEach((superDropableLink) => {
+    superDropableLink.addEventListener("click" , (e) => {
+
+        e.preventDefault();
+        
+        if(superDropableLink.innerText == "Bread"){
+            superSubMenus[0].classList.toggle("superSubMenu-displaying");         
+        }
+
+        else if(superDropableLink.innerText == "Buns & Rolls"){
+            superSubMenus[1].classList.toggle("superSubMenu-displaying");
         }
 
     })
