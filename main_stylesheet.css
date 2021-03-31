@@ -722,6 +722,17 @@ body{
 
 /*****DOWNLOADS PAGE STYLING STARTS HERE*****/
 
+.downloads-body{
+    margin-top : 5px;
+}
+
+.downloads-container{
+    padding : 40px 30px;
+}
+
+.downloads-container > div img{
+    width : 100%;
+}
 
 .downloads-body h5,p{
     color: #0059a9;
@@ -732,19 +743,6 @@ body{
 .downloads-body h5{
     font-weight : 600;
     margin-top : 5px;
-}
-
-.downloads-body .row{
-    position : relative;
-}
-
-.downloads-body p{
-    position : absolute;
-    top : 98%;
-}
-
-.downloads-body .firstRow ,.secondRow{
-    padding-bottom: 30px;
 }
 
 /****RECIPES PAGE STYLING STARTS HERE****/
