@@ -793,16 +793,28 @@ body{
 
 /****BUNS AND ROLLS VITA LIFE RANGE STYLING STARTS HERE****/
 
-.pageband.vitaLife{
+.pageband.vita-life{
     background-image : url("pics/productrange_pics/vitalifebuns_pics/vita.jpg");
 }
 
-.vitaLifeBunsAndRolls-body .col{
-    padding : 10px;
+.vita-life-buns-and-rolls-body{
+    margin-top : 5px;
 }
 
-.vitaLifeBunsAndRolls-body .row img{
-    height : 338px;
+.vita-life-buns{
+    padding : 40px 30px;
+    display : grid;
+    grid-template-columns: repeat(2,0.5fr);
+    grid-column-gap: 10%;
+
+}
+
+.vita-life-buns .bakery-item h5{
+    padding : 5px 0px;
+}
+
+.vita-life-buns .bakery-item p , .vita-life-buns .bakery-item h5{
+    margin: 0;
 }
 
 /****TREATS BUNS STYLING STARTS HERE****/
