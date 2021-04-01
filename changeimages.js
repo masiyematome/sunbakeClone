@@ -4,7 +4,7 @@
 
 let pagePathName = location.pathname;
 
-const breads = document.querySelectorAll(".bread");
+const bakeryItems = document.querySelectorAll(".bakery-item");
 
 /**Functions**/
 
@@ -12,25 +12,25 @@ const breads = document.querySelectorAll(".bread");
 
 function getImages(originalImages,hoverImages){
 
-    const breadsArray = Array.from(breads);
+    const bakeryItemsArray = Array.from(bakeryItems);
 
-    breadsArray.forEach((bread) => {
+    bakeryItemsArray.forEach((bakeryItem) => {
 
-        const breadImage = bread.children[0];
-        const breadIndex = breadsArray.indexOf(bread);
+        const bakeryItemImage = bakeryItem.children[0];
+        const bakeryItemIndex = bakeryItemsArray.indexOf(bakeryItem);
 
 
-        bread.addEventListener("mouseover" , ()=>{
+        bakeryItem.addEventListener("mouseover" , ()=>{
 
-            bread.style.cursor = "pointer";
-            breadImage.src = hoverImages[breadIndex].image;
+            bakeryItem.style.cursor = "pointer";
+            bakeryItemImage.src = hoverImages[bakeryItemIndex].image;
 
         });
 
-        bread.addEventListener("mouseout" , ()=>{
+        bakeryItem.addEventListener("mouseout" , ()=>{
 
-            bread.style.cursor = "pointer";
-            breadImage.src = originalImages[breadIndex].image;
+            bakeryItem.style.cursor = "pointer";
+            bakeryItemImage.src = originalImages[bakeryItemIndex].image;
 
         });
     });

@@ -404,16 +404,16 @@ body{
     padding : 10px 0px;
 }
 
-.bread{
+.bakery-item{
     text-align: center;
     padding : 15px 0px;
 }
 
-.bread img{
+.bakery-item img{
     width : 100%;
 }
 
-.bread h5{
+.bakery-item h5{
     font-size : 14px;
     color : #d71920;
     font-weight : 700;
@@ -421,11 +421,11 @@ body{
     padding : 8px 0px;
 }
 
-.bread p{
+.bakery-item p{
     font-size : 16px;
 }
 
-.bread h5,.bread p{
+.bakery-item h5,.bakery-item p{
     text-align : left;
 }
 
@@ -440,23 +440,25 @@ body{
     text-align : center;
 }
 
-.pageband h1{
-    font-size : 28px;
-    color : #fff;
-    font-weight : 400;
+.buns-and-rolls-body{
+    margin-top : 5px;
 }
 
-.bunsAndRolls-body .row{
-    padding-bottom : 30px;
+.everyday-buns-and-rolls{
+    padding : 40px 30px;
+    display : grid;
+    grid-template-columns: repeat(2,0.5fr);
+    grid-column-gap:10%;
 }
 
-.bunsAndRolls-body .col-md-4{
-    margin-left : 35px;
+.everyday-buns-and-rolls .bakery-item h5{
+    margin : 0;
+    padding : 5px 0px;
 }
 
-.bunsAndRolls-body img{
-    width : 280px;
-    height : 338px;
+.everyday-buns-and-rolls p{
+    margin : 0;
+    padding : 0;
 }
 
 /***BAKERIES PAGE STYLING STARTS HERE***/
@@ -836,15 +838,15 @@ body{
     grid-column-gap:10%;
 }
 
-.vita-life-breads .bread img{
+.vita-life-breads .bakery-item img{
     width : 100%;
 }
 
-.vita-life-breads .bread p{
+.vita-life-breads .bakery-item p{
     margin : 0;
 }
 
-.vita-life-breads .bread h5{
+.vita-life-breads .bakery-item h5{
     padding : 5px 0px;
 }
 
