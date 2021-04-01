@@ -393,11 +393,11 @@ body{
     margin-top : 5px;
 }
 
-.breads{
+.everyday-range-breads{
     padding : 40px 30px;
 }
 
-.breads > div {
+.everyday-range-breads > div {
     display : grid;
     grid-template-columns: repeat(2,0.5fr);
     grid-column-gap: 10%;
@@ -825,17 +825,27 @@ body{
 
 /****VITA-LIFE BREAD PAGE STYLING STARTS HERE*****/
 
-
-.vitaLifeBread-body .row img{
-    height : 338px;
+.vita-life-bread-body{
+    margin-top : 5px;
 }
 
-.vitaLifeBread-body .column2,.column3{
-    margin-left : 85px;
+.vita-life-breads{
+    padding : 40px 30px;
+    display : grid;
+    grid-template-columns: repeat(2,0.5fr);
+    grid-column-gap:10%;
 }
 
-.vitaLifeBread-body h5{
-    font-size : 18px;
+.vita-life-breads .bread img{
+    width : 100%;
+}
+
+.vita-life-breads .bread p{
+    margin : 0;
+}
+
+.vita-life-breads .bread h5{
+    padding : 5px 0px;
 }
 
 
