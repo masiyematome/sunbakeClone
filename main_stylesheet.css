@@ -812,17 +812,23 @@ body{
     background-image : url("pics/productrange_pics/treatsbuns_pics/treats.jpg");
 }
 
-
-.treatsBunsAndRolls-body .row{
-    padding: 30px;
+.treats-buns-and-rolls-body{
+    margin-top : 5px;
 }
 
-.treatsBunsAndRolls-body .row img{
-    height : 338px;
+.treats-buns-range{
+    padding : 40px 30px;
+    display : grid;
+    grid-template-columns: repeat(2,0.5fr);
+    grid-column-gap: 10%;
 }
 
-.treatsBunsAndRolls-body .col-md-4{
-    margin-left : 25px;
+.treats-buns-range .bakery-item h5{
+    padding : 5px 0px;
+}
+
+.treats-buns-range .bakery-item p{
+    margin : 0;
 }
 
 /****VITA-LIFE BREAD PAGE STYLING STARTS HERE*****/
