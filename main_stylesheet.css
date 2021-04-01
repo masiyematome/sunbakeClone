@@ -172,7 +172,6 @@ body{
     border-color : white;
 }
 
-
 /***SLIDESHOW STARTS HERE**/
 
 .slideshow-container{
@@ -496,48 +495,35 @@ body{
 
 /*****COMPETITIONS PAGE STYLING STARTS HERE*****/
 
-.competitionsWinners-body{
-    padding : 50px 100px 30px;
-    background-color : #C7333A ;
+.competitions-tcs-body{
+  margin-top : 5px;  
 }
 
-.competitionsband{
-    background-image : url("pics/general_pics/header.jpg");
-    padding : 15px 10px 10px 100px;
-    background-position : center;
-    background-size : cover;
-    background-repeat: no-repeat;
+.terms-and-conditions {
+    padding : 40px 30px;
+    color : #333333;
 }
 
-.competitionsband h1{
-    font-size : 28px;
-    color : #fff;
-    font-weight : 400;
-    font-family: sans-serif;
+.terms-and-conditions h4,.terms-and-conditions h5{
+    font-size : 14px;
+    font-weight: bold;
 }
 
-.competitions-body h1{
-    font-size : 28px;
-    color : #0059a9;
-    font-family : sans-serif;
+.terms-and-conditions p{
+    color : #333333;
 }
 
-.competitions-line{
-    border : 1px dashed #d71920;
+.terms-and-conditions p:nth-of-type(1){
+    padding : 15px 0px;
 }
 
-.competition-terms{
-    list-style-type: none;
-    padding : 0;
-    margin : 0;
+.terms-and-conditions ol{
+    padding : 0px 15px 15px;
 }
 
-.competition-terms li a{
-    color : #0059a9;
-}
-
-.picturesPart{
-    padding : 8px 0px 10px 0px;
+.terms-and-conditions ol li{
+    margin-left : 10%;
+    font-size: 14px;
 }
 
 /*****CONTACT US PAGE STYLING STARTS HERE*****/
