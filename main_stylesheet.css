@@ -176,8 +176,8 @@ body{
 
 .slideshow-container{
     position : relative;
-    height : 112px;
     width : 100%;
+    height : 112px;
 }
 
 #slides{
@@ -234,78 +234,43 @@ body{
     background-image: url("pics/homepage_pics/slider-home.jpg");
 }
 
-.controls{
-    position: absolute;
-    top : 45%;
-    padding : 10px;
-    font-size: 50px;
-    width : 50px;
-    height : 50px;
-    background : url("pics/general_pics/header.jpg");
-    opacity : 0.8;
-    border-radius: 50%;
-    display : none;
+.controls-container{
+    position : absolute;
+    padding : 0px 20px;
+    display : flex;
+    justify-content: space-between;
+    width : 100%;
+    height : 100%;
+    align-items: center;
 }
 
-.slideshow-container:hover .controls{
-    display: block;
+.controls{
+    width : 40px;
+    height : 40px;
+    background : url("pics/general_pics/header.jpg");
+    border-radius: 50%;
+    text-align: center;
 }
 
 .controls .fa{
-    color:yellow;
-    opacity : 0.5;
-    position : absolute;
-    top : 2%;
+    color : yellow;
+    font-size : 40px;
+    opacity : 0.7;
+    pointer-events: none;
 }
 
-.controls .fa-caret-left{
-    left : 25%;
+#previous .fa{
+    margin-right : 8px;
 }
 
-.controls .fa-caret-right{
-    right : 25%;
+#next .fa{
+    margin-left: 8px;
 }
-
-
-#previous{
-    left : 25px;
-
-    -webkit-animation: fadeinright 0.4s;
-    -moz-animation: fadeinright 0.4s;
-    -o-animation: fadeinright 0.4s;
-    -ms-animation : fadeinright 0.4s;
-    animation : fadeinright 0.4s;
-}
-
-#next{
-    right : 15px;
-
-    -webkit-animation: fadeinleft 0.4s;
-    -moz-animation: fadeinleft 0.4s;
-    -o-animation: fadeinleft 0.4s;
-    -ms-animation : fadeinleft 0.4s;
-    animation : fadeinleft 0.4s;
-}
-
-@keyframes fadeinright{
-    from{
-        left : -25px
-    }
-}
-
-@keyframes fadeinleft{
-    from{
-        right : -25px;
-    }
-}
-
-
 
 /**SECOND SECTION STARTS HERE**/
 
 .homepage-products{
     padding : 40px 30px;
-    margin-top:7px;
 }
 
 .homepage-products h1{
@@ -316,19 +281,15 @@ body{
 
 .homepage-products p{
     font-size: 16px;
-    color: #0059a9;
-    margin : 15px 0px 10px;
+    color: #0059a9
 }
 
-.homepage-products .row > div{
-    display : flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.homepage-products .row > div p{
+.homepage-products .bakery-range{
     text-align: center;
-    width : 90%;
+}
+
+.homepage-products .bakery-range > div p{
+    padding : 5px 0px;
 }
 
 
@@ -363,7 +324,6 @@ body{
 /*****==============================*****/
 
 .aboutus-body {
-    margin-top : 5px;
     padding : 40px 30px;
 }
 
@@ -388,9 +348,6 @@ body{
 
 /*****PRODUCT RANGE STYLING STARTS HERE*****/
 
-.productrange-body{
-    margin-top : 5px;
-}
 
 .everyday-range-breads{
     padding : 40px 30px;
@@ -439,10 +396,6 @@ body{
     text-align : center;
 }
 
-.buns-and-rolls-body{
-    margin-top : 5px;
-}
-
 .everyday-buns-and-rolls{
     padding : 40px 30px;
     display : grid;
@@ -461,10 +414,6 @@ body{
 }
 
 /***BAKERIES PAGE STYLING STARTS HERE***/
-
-.bakeries-body{
-    margin-top : 5px;
-}
 
 .bakeries-content{
     padding : 40px 30px;
@@ -528,21 +477,12 @@ body{
 
 /*****CONTACT US PAGE STYLING STARTS HERE*****/
 
-
-.contact-us-body{
-    margin-top : 5px;
-}
-
-.contact-us-body .row .image-container{
+.contact-us-body .content-wrapper .image-container{
     padding : 0px 0px 20px;
+    text-align: center;
 }
 
-.contact-us-body .row .image-container img{
-    width : 100%;
-    height: 411px;
-}
-
-.contact-us-body .row{
+.contact-us-body .content-wrapper{
     padding : 40px 30px;
     margin : 0px;
 }
@@ -734,10 +674,6 @@ body{
 
 /*****DOWNLOADS PAGE STYLING STARTS HERE*****/
 
-.downloads-body{
-    margin-top : 5px;
-}
-
 .downloads-container{
     padding : 40px 30px;
 }
@@ -760,10 +696,6 @@ body{
 
 /****RECIPES PAGE STYLING STARTS HERE****/
 
-.recipes-body {
-    margin-top : 5px;
-}
-
 .recipes-container{
     padding : 40px 30px;
     min-height: 50vh;
@@ -781,10 +713,6 @@ body{
 
 .pageband.vita-life{
     background-image : url("pics/productrange_pics/vitalifebuns_pics/vita.jpg");
-}
-
-.vita-life-buns-and-rolls-body{
-    margin-top : 5px;
 }
 
 .vita-life-buns{
@@ -810,10 +738,6 @@ body{
     background-image : url("pics/productrange_pics/treatsbuns_pics/treats.jpg");
 }
 
-.treats-buns-and-rolls-body{
-    margin-top : 5px;
-}
-
 .treats-buns-range{
     padding : 40px 30px;
     display : grid;
@@ -830,10 +754,6 @@ body{
 }
 
 /****VITA-LIFE BREAD PAGE STYLING STARTS HERE*****/
-
-.vita-life-bread-body{
-    margin-top : 5px;
-}
 
 .vita-life-breads{
     padding : 40px 30px;
@@ -859,6 +779,7 @@ body{
 
 /**image slider styling**/
 
+
 .slider img{
     width : 100%;
 }
@@ -868,489 +789,31 @@ body{
     background-position : center;
     background-size: cover;
     background-repeat: no-repeat;
+    margin-top : 7px;
 }
 
 /*******MEDIA**********/
 /*******QUERIES********/
 
-/*
+@media only screen and (min-width : 768px){
 
-@media (min-width : 990px) and (max-width : 1350px){
-
-    body{
-        width : 99%;
-    }
-
-    .homepage-products img{
-        width : 95%;
-    }
-
-    .aboutus-body img,.competitionsWinners-body img,.competitions-body img,.contactus-body img{
-        width : 100%;
-    }
-
-    .productrange-body img,.bunsAndRolls-body img,.treatsBunsAndRolls-body img,.vitaLifeBunsAndRolls-body img{
-        width : 100%;
-    }
-
-    .downloads-body img{
-        width : 95%;
-    }
-
-    .contactus-body .row{
-        padding : 5%;
-    }
-
-    .contactus-body .contactusform{
-        padding : 0;
-        margin : 0;
-        width : 100% !important;
-    }
-
-    .contactus-body form{
-        margin-top : 0;
-    }
-
-    .contactus-body .contactuslist{
-        padding : 0%;
-    }
-
-    .contactusform .icons-container .icons{
-        margin-top : 7%;
-    }
-
-    .contact-details .row{
-        width : 100%;
-        padding : 0;
-        margin : 0;
-    }
-
-    .contact-details .spoonpart{
-        position: relative;
-        width : 100%;
-        margin-top : 1%;
-    }
-
-    .contact-details .sitemap{
-        font-size : 14px;
-    }
-
-}
-
-*/
-
-/*
-@media (max-width : 1000px){
-
-    body{
-        width : 100%;
-    }
-
-    *NAVIGATION BAR STARTS HERE**
-
-    .navbar{
-        display: flex;
-        flex-direction: column;
-        height : 100%;
-        padding : 0px 5px 10px;
-        text-align: center;
-
-    }
-
-    .navbar .navbar-links{
-        position: relative;
-        width : 100%;
-        padding : 10px 0px 25px;
-        display : none;
-
-        -webkit-animation: slidedown 1s;
-        animation: slidedown 1s;
-
-    }
-
-    @keyframes slidedown {
-        from{
-            transform: scaleY(0.9);
-        }
-
-        to{
-            transform : scaleY(1)
-        }
-    }
-
-    .navbar .mainMenu>li{
-        display : block;
-    }
-
-    .navbar a{
-        font-size : 14px;
-        font-weight : 550;
-        font-family: "Open Sans";
-        padding : 4px;
-    }
-
-    .navbar .mainMenu .fa{
-        position: relative;
-        left : 1%;
-        transform : translateX(-50%);
-    }
-
-    .navbar a:hover{
-        color : #000;
-    }
-
-    .navbar li:hover .fa{
-        color : #fff;
-    }
-
-    .navbar .fa{
-        display : inline-block;
-    }
-
-    .navbar .mainMenu>li a::after{
-        content : none;
-    }
-
-    .navbar .navbar-links .logoLink{
-        display : none;
-    }
-
-    .navbar .title-bar{
-        display : block;
-        padding : 0px 0px 10px;
-    }
-
-    .navbar .toggle-button{
-        display: block;
-    }
-
-    .navbar .subMenu ,.navbar .superSubMenu{
-        width : 100% !important;
-        position : relative;
-    }
-
-    .navbar .mainMenu>li:hover .subMenu{
-        display : none;
-    }
-
-    .navbar .mainMenu>li:hover .subMenu{
-        background-image: none;
-    }
-
-    .navbar .subMenu>li:hover a,.navbar .subMenu>li:hover a{
-        background-image: url("pics/general_pics/menu_1.png") !important;
-    }
-
-    .navbar .subMenu>li:hover .mainMenu>li:hover a{
-        background-image : none !important;
-    }
-
-    .navbar .subMenu{
-        background-image : none;
-    }
-
-    .navbar .subMenu>li:hover .superSubMenu{
-        display : none;
-    }
-
-
-    .navbar .superSubMenu{
-        left : 0;
-        transform: translateX(0%);
-    }
-
-    .navbar .subMenu a:hover{
-        color : #000;
-    }
-
-    .navbar .dropdownDivider{
-        display : none;
-    }
-
-    
-
-    **NAVIGATION BAR ENDS HERE***
-
-    .slider{
-        width : 80%;
-        margin : auto;
-    }
+    /**Slideshow on the index page**/
 
     .slideshow-container{
-        width : 80%;
-        margin : auto;
+        height : 224px;
     }
 
-    .slideshow-container img{
-        width : 100%;
+    /**Pagebody ,slider picture area and footer areas**/
+
+    .pagebody , .contact-details ,.slider{
+        width : 98%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .homepage-products.pagebody{
-        width : 80%;
-        margin : auto;
-        margin-top : -105px;
-        text-align : center;
-    }
-    
-    .pageband,.competitionsband{
-        text-align : center;
-        padding : 10px 10px 5px 30px; 
-        width : 80%;
-        margin : auto;
-    }
-
-    .pageband h1,.competitionsband h1{
-        font-size : 20px;
-        font-weight : 600;
-    }
-
-    .slideshow-container #slides{
-        width : 100%;
-        height : 70%;
-    }
-
-    .pagebody{
-        padding : 50px !important;
-        width : 80%;
-        margin : auto;
-    }
-
-    .pagebody h1{
-        font-size : 25px;
-        font-weight : 450;
-    }
-
-    .aboutus-body{
-        text-align : left;
-        padding : 40px 35px !important;
-    }
-
-    .aboutus-body .row{
-       padding : 0;
-    }
-
-    .aboutus-body img{
-        width : 55%;
-    }
-
-    .aboutus-body h1{
-        font-size : 35px;
-        font-weight : 500;
-    }
-
-    .contactus-body{
-        padding : 40px 0px !important;
-        text-align : left;
-    }
-
-    .contactus-body .row{
-        width : 100%;
-    }
-
-    .contactus-body .contactusform{
-        width : 70%;
-        position : relative;
-        margin-top : 60px;
-        margin-left : 25px;
-    }
-
-    .contactus-body .contactuslist{
-        width : 90%;
-        
-    }
-
-    .contactus-body img{
-        position :relative;
-        left : 50%;
-        transform: translateX(-50%);
-    }
+    /**icons container on the contact form in the contact us page**/
 
     #contactform .icons-container{
-        width : 80%;
-        height : 110px;
-        border : 1px solid #0059A9;
-        margin-left : 3px;
-        padding : 10px;
-        position : relative;
+        width : 50%;
     }
-
-    .competitionsWinners-body{
-        padding : 40px 30px 40px;
-    }
-
-    .competitionsWinners-body img{
-        width : 100%;
-    }
-
-    .bakeries-body {
-        text-align : left;
-    }
-
-    .bakeries-body h5{
-        font-size : 14px;
-    }
-
-    .downloads-body{
-        padding : 40px 30px 20px !important;
-    }
-
-    .downloads-body img{
-        width : 55%;
-    }
-
-    .downloads-body h5{
-        text-align : left;
-    }
-
-    .downloads-body p{
-        position: relative;
-        text-align : left;
-        font-size : 14px;
-    }
-
-    .competitionsWinners-body{
-        width : 80%;
-        margin : auto;
-    }
-
-    .competitions-body img{
-        width : 100%;
-    }
-
-    .bunsAndRolls-body .row,.treatsBunsAndRolls-body .row,.vitaLifeBread-body .row,.vitaLifeBunsAndRolls-body .row,
-    .productrange-body .row
-    {
-        display : flex;
-        flex-direction: column;
-        position : relative;
-        width : 100%;
-    }
-
-    .bunsAndRolls-body .firstRow .col-lg-4:nth-of-type(2) ,.bunsAndRolls-body .secondRow .col-lg-4:nth-of-type(2){
-        margin-top : 40px;
-    }
-
-    .treatsBunsAndRolls-body .firstRow .col-lg-4:nth-of-type(2),.treatsBunsAndRolls-body .secondRow .col-lg-4:nth-of-type(2){
-        margin-top : 40px;
-    }
-
-    .vitaLifeBread-body .column2 ,.vitaLifeBread-body .column3{
-        margin-left : 0;
-        margin-top : 40px;
-    }
-
-    .vitaLifeBunsAndRolls-body .col-lg-4:nth-of-type(2){
-        margin-top : 40px;
-    }
-
-    .productrange-body .col-lg-4:nth-of-type(2) ,.productrange-body .col-lg-4:nth-of-type(3){
-        margin-top : 40px;
-    }
-
-    .contact-details{
-        width : 80%;
-        margin : auto;
-    }
-
-    .contact-details .row{
-        width : 100%;
-        padding : 1%;
-        margin : 0;
-    }
-
-    .contact-details .spoonpart{
-        position: relative;
-        width : 100%;
-        top : 7px;
-    }
-
-    .contact-details .sitemap{
-        display : none;
-    }
-    
 }
-
-@media (max-width : 776px){
-    
-    .pagebody,.pageband,.competitionsband,.slider,.contact-details,.homepage-products.pagebody{
-        width : 100%;
-    }
-
-    .homepage-products img{
-        width : 95%;
-    }
-
-    .slideshow-container{
-        position: relative;
-        width : 100%;
-        height : 205px;
-    }
-
-    .slideshow-container img{
-        height : 100%;
-        position: absolute;
-    }
-
-    .homepage-products.pagebody{
-        margin-top : -60px;
-    }
-
-    .aboutus-body img{
-        width : 100%;
-    }
-
-    .downloads-body img{
-        width : 100%;
-    }
-    
-    .productrange-body img{
-        width : 100%;
-    }
-
-    .competitionsWinners-body{
-        width : 100%;
-    }
-
-    #contactform .icons-container{
-        width : 100%;
-    }
-
-    .productrange-body .row{
-        margin-top : 40px;
-    }
-
-    .bunsAndRolls-body .row ,.treatsBunsAndRolls-body .row,.vitaLifeBread-body .row,.vitaLifeBunsAndRolls-body .row,
-    .productrange-body .row
-    {
-        width : 100%;
-    }
-
-    .bunsAndRolls-body .col-lg-4,.treatsBunsAndRolls-body .col-lg-4,.vitaLifeBread-body .row,.vitaLifeBunsAndRolls-body .row,
-    .productrange-body .row
-    {
-        left : 60% !important;
-        transform: translateX(-50%);
-        width : 78%;
-        padding : 0px;
-    }
-    
-     .contactus-body .icons-container{
-         width : 120% !important;
-     }
-     
-     .contactus-body .icons{
-         margin-top : 15px;
-     }
-     
-     .contact-details .row{
-         padding : 0px;
-     }
-     
-     .contact-details .spoonpart img{
-         width : 40%;
-         height : 80%;
-         margin-top : 40px;
-     }
-
-}
-*/
