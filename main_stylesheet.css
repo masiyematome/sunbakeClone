@@ -822,6 +822,13 @@ body{
 }
 
 @media only screen and (min-width : 992px){
+
+    /*Body*/
+
+    body{
+        width : 95%;
+        margin : auto;
+    }
     
     /*Navigation bar**/
 
@@ -832,7 +839,7 @@ body{
     .navbar{
         flex-direction: row;
         position : relative;
-        height : 120px;
+        height : 150px;
         padding-bottom: 0px;
     }
 
@@ -851,10 +858,16 @@ body{
         display : block;
     }
 
+    .navbar .mainMenu li:nth-of-type(9){
+        display : none;
+    }
+
     .navbar a{
-        font-size : 15px;
+        font-size : 17px;
         position : relative;
         padding : 7px 15px;
+        font-weight : lighter;
+        font-family: 'Oswald', sans-serif;
     }
 
     .navbar a:hover{
@@ -889,6 +902,38 @@ body{
     
     .navbar .mainMenu>li:hover a::after{
         border: 1px solid transparent;
+    }
+
+    /*Slideshow*/
+
+    .slideshow-container{
+        height : 285px;
+    }
+
+    /*page body ,slider and footer*/
+
+    .pagebody , .contact-details ,.slider{
+        width : 100%;
+    }
+
+    /**Homepage products**/
+
+    .homepage-products{
+        padding : 40px 100px 20px;
+    }
+
+    .homepage-products .bakery-range{
+        display : flex;
+        justify-content: space-between;
+        text-align : left;
+    }
+
+    .homepage-products .bakery-range > div{
+        flex : 0.3;
+    }
+
+    .homepage-products .bakery-range > div img{
+        width : 100%;
     }
 
 }
