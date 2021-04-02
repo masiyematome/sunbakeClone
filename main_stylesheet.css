@@ -54,7 +54,6 @@ body{
 }
 
 .dropable::after,.navbar .subMenu > li a::after{
-    /* content : "\1F892"; */
     content : ">";
     padding : 0px 5px;
     font-weight : 800;
@@ -674,13 +673,6 @@ body{
 
 /*****DOWNLOADS PAGE STYLING STARTS HERE*****/
 
-.downloads-container{
-    padding : 40px 30px;
-}
-
-.downloads-container > div img{
-    width : 100%;
-}
 
 .downloads-body h5,p{
     color: #0059a9;
@@ -692,6 +684,17 @@ body{
     font-weight : 600;
     padding : 5px 0px 3px;
     margin : 0;
+}
+
+.downloads-container{
+    padding : 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.downloads-container > div img{
+    width : 100%;
 }
 
 /****RECIPES PAGE STYLING STARTS HERE****/
@@ -816,4 +819,76 @@ body{
     #contactform .icons-container{
         width : 50%;
     }
+}
+
+@media only screen and (min-width : 992px){
+    
+    /*Navigation bar**/
+
+    .title-bar,.navbar .toggle-button{
+        display : none;
+    }
+
+    .navbar{
+        flex-direction: row;
+        position : relative;
+        height : 120px;
+        padding-bottom: 0px;
+    }
+
+    .navbar .mainMenu{
+        flex-direction: row;
+        height : 50%;
+        padding : 0px 0px;
+        justify-content: center;
+    }
+
+    .navbar ul li{
+        width : inherit;
+    }
+
+    .navbar-links{
+        display : block;
+    }
+
+    .navbar a{
+        font-size : 15px;
+        position : relative;
+        padding : 7px 15px;
+    }
+
+    .navbar a:hover{
+        background : url("pics/general_pics/menu_1.png");
+    }
+
+    .navbar a::after{
+        content :'|';
+        position : absolute;
+        right : 0%;
+    }
+
+    .dropable::after,.navbar .subMenu > li a::after{
+        content : "";
+    }
+
+    .navbar .logoLink{
+        z-index : 1;
+    }
+
+    .navbar .logoLink a{
+        display : block;
+    }
+
+    .navbar .logoLink a::after{
+        content : '';
+    }
+
+    .navbar li:nth-of-type(5):hover a{
+        background-image: block;
+    }
+    
+    .navbar .mainMenu>li:hover a::after{
+        border: 1px solid transparent;
+    }
+
 }
