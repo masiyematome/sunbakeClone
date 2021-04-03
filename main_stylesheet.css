@@ -397,17 +397,20 @@ body{
 
 .everyday-buns-and-rolls{
     padding : 40px 30px;
+}
+
+.buns-and-rolls{
     display : grid;
     grid-template-columns: repeat(2,1fr);
     grid-column-gap:10%;
 }
 
-.everyday-buns-and-rolls .bakery-item h5{
+.buns-and-rolls .bakery-item h5{
     margin : 0;
     padding : 5px 0px;
 }
 
-.everyday-buns-and-rolls p{
+.buns-and-rolls p{
     margin : 0;
     padding : 0;
 }
@@ -720,17 +723,19 @@ body{
 
 .vita-life-buns{
     padding : 40px 30px;
+}
+
+.vita-buns{
     display : grid;
     grid-template-columns: repeat(2,1fr);
     grid-column-gap: 10%;
-
 }
 
-.vita-life-buns .bakery-item h5{
+.vita-buns .bakery-item h5{
     padding : 5px 0px;
 }
 
-.vita-life-buns .bakery-item p , .vita-life-buns .bakery-item h5{
+.vita-buns .bakery-item p , .vita-buns .bakery-item h5{
     margin: 0;
 }
 
@@ -743,16 +748,19 @@ body{
 
 .treats-buns-range{
     padding : 40px 30px;
+}
+
+.buns-treats{
     display : grid;
     grid-template-columns: repeat(2,1fr);
     grid-column-gap: 10%;
 }
 
-.treats-buns-range .bakery-item h5{
+.buns-treats .bakery-item h5{
     padding : 5px 0px;
 }
 
-.treats-buns-range .bakery-item p{
+.buns-treats .bakery-item p{
     margin : 0;
 }
 
@@ -985,12 +993,26 @@ body{
         grid-column : 7 / 11;
     }
 
-    
+    /**Vita life bread**/
 
+    .vita-life-breads{
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: 4%;
+    }
+
+    /**Everyday range buns**/
+
+    .buns-and-rolls,.buns-treats,.vita-buns{
+        grid-column-gap: 4%;
+        padding : 0px 100px 20px;
+    }
+    
     /**Common styling**/
 
     .homepage-products,.aboutus-body,.terms-and-conditions,
-    .bakeries-content,.downloads-container,.everyday-range-breads{
+    .bakeries-content,.downloads-container,.everyday-range-breads,
+    .vita-life-breads,.everyday-buns-and-rolls,.treats-buns-range,
+    .vita-life-buns{
         padding : 40px 100px 20px;
     }
 
