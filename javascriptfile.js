@@ -17,7 +17,6 @@ const superDropableLinks = document.querySelectorAll(".first > li > a");
 const subMenus = document.querySelectorAll(".subMenu");
 const superSubMenus = document.querySelectorAll(".superSubMenu");
 
-
 /**Make dropable links clickable**/
 
 dropableLinks.forEach((dropableLink) => {

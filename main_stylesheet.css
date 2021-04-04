@@ -117,6 +117,7 @@ body{
 .navbar .subMenu{
     text-align: center;
     display : none;
+    z-index : 1;
 }
 
 .subMenu.subMenu-displaying{
@@ -325,10 +326,6 @@ body{
 
 .aboutus-body {
     padding : 40px 30px;
-}
-
-.aboutus-body .about-us-content > div img{
-    width : 100%;
 }
 
 .aboutus-body h1{
@@ -880,6 +877,10 @@ body{
         font-family: 'Oswald', sans-serif;
     }
 
+    .navbar a.clicked{
+        color : red;
+    }
+
     .navbar a:hover{
         background : url("pics/general_pics/menu_1.png");
     }
@@ -912,6 +913,51 @@ body{
     
     .navbar .mainMenu>li:hover a::after{
         border: 1px solid transparent;
+    }
+
+    .navbar .mainMenu li{
+        position : relative;
+    }
+
+    .navbar .subMenu{
+        position : absolute;
+        width : 100%;
+    }
+
+    .navbar .mainMenu li:hover a{
+        background : url("pics/general_pics/menu_1.png");
+    }
+
+    .navbar .mainMenu li:hover .subMenu{
+        display : block;
+    }
+
+    .navbar .subMenu li{
+        position: relative;
+    }
+
+    .navbar .superSubMenu{
+        position : absolute;
+        top : 0%;
+        left : 100%;
+        width : 100%;
+        background : url("pics/general_pics/menu_2.png");
+    }
+
+    .navbar .subMenu li:hover .superSubMenu{
+        display : block;
+    }
+
+    .navbar .subMenu li:hover .superSubMenu a{
+        background : url("pics/general_pics/menu_2.png");
+    }
+
+    .navbar .subMenu a:hover{
+        color : #ffee00;
+    } 
+    
+    .navbar .superSubMenu li:hover a{
+        color : #ffee00;
     }
 
     /*Slideshow*/
