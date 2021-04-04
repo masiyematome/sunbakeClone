@@ -105,10 +105,6 @@ body{
     }
 }
 
-.navbar li:nth-of-type(5):hover a{
-    background-image: none;
-}
-
 .navbar .mainMenu>li:hover a::after{
     border: 1px solid transparent;
 }
@@ -878,14 +874,6 @@ body{
         font-family: 'Oswald', sans-serif;
     }
 
-    .navbar a.clicked{
-        color : red;
-    }
-
-    .navbar a:hover{
-        background : url("pics/general_pics/menu_1.png");
-    }
-
     .navbar a::after{
         content :'|';
         position : absolute;
@@ -908,12 +896,8 @@ body{
         content : '';
     }
 
-    /* .navbar li:nth-of-type(5):hover a{
-        background-image: url("");
-    } */
-    
-    .navbar .mainMenu>li:hover a::after{
-        border: 1px solid transparent;
+    .navbar .mainMenu>li a:hover::after{
+        color : transparent;
     }
 
     .navbar .mainMenu li{
@@ -1159,6 +1143,11 @@ body{
     .superSubMenu.superSubMenu-displaying{
         display : none;
     }
+
+    .navbar .mainMenu li:nth-of-type(5) a:hover{
+        background : transparent;
+    }
+    
 
     /**Slide show area**/
 
