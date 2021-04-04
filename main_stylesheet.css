@@ -517,6 +517,7 @@ body{
 
 .contactusline{
     border : 1px dashed #d71920;
+    width : 100%;
 }
 
 .contact-us-form h3{
@@ -830,7 +831,7 @@ body{
     }
 }
 
-@media only screen and (min-width : 992px){
+@media only screen and (min-width : 1024px){
 
     /*Body*/
 
@@ -1013,7 +1014,7 @@ body{
     .homepage-products,.aboutus-body,.terms-and-conditions,
     .bakeries-content,.downloads-container,.everyday-range-breads,
     .vita-life-breads,.everyday-buns-and-rolls,.treats-buns-range,
-    .vita-life-buns{
+    .vita-life-buns,.content-wrapper{
         padding : 40px 100px 20px;
     }
 
@@ -1029,6 +1030,40 @@ body{
 
     .bakery-item h5{
         font-size : 18px;
+    }
+
+    /**Contact us page**/
+
+    .contact-us-body .content-wrapper{
+        display : flex;
+        justify-content: space-between;
+        padding : 40px 100px 20px;
+    }
+
+    .content-wrapper .image-container,.contactuslist,.contact-us-form{
+        align-self: flex-start;
+    }
+
+    .contactuslist{
+        padding : 15px;
+    }
+
+    .content-wrapper .image-container{
+        flex-basis: 30%;
+    }
+
+    .contact-us-form{
+        flex-basis: 40%;
+    }
+
+    .content-wrapper .image-container img{
+        width : 100%;
+    }
+
+    /**icons container on the contact form in the contact us page**/
+
+    #contactform .icons-container{
+        width : 100%;
     }
 
 }
@@ -1087,5 +1122,11 @@ body{
 
     .slideshow-container:hover #next{
         margin-right: 0px;
+    }
+
+    /**icons container on the contact form in the contact us page**/
+
+    #contactform .icons-container{
+        width : 80%;
     }
 }
