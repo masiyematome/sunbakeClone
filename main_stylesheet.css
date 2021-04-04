@@ -77,7 +77,6 @@ body{
     background-repeat: no-repeat;
 }
 
-
 .navbar .mainMenu li{
     display: block;
 }
@@ -127,6 +126,8 @@ body{
 
 .dropdownDivider{
     display : none;
+    border : 1px solid white;
+    z-index : 1;
 }
 
 .navbar .active .subMenu a ,.navbar .active .superSubMenu a{
@@ -907,9 +908,9 @@ body{
         content : '';
     }
 
-    .navbar li:nth-of-type(5):hover a{
-        background-image: block;
-    }
+    /* .navbar li:nth-of-type(5):hover a{
+        background-image: url("");
+    } */
     
     .navbar .mainMenu>li:hover a::after{
         border: 1px solid transparent;
@@ -924,12 +925,8 @@ body{
         width : 100%;
     }
 
-    .navbar .mainMenu li:hover a{
+    .navbar .subMenu a{
         background : url("pics/general_pics/menu_1.png");
-    }
-
-    .navbar .mainMenu li:hover .subMenu{
-        display : block;
     }
 
     .navbar .subMenu li{
@@ -944,21 +941,10 @@ body{
         background : url("pics/general_pics/menu_2.png");
     }
 
-    .navbar .subMenu li:hover .superSubMenu{
+    .dropdownDivider{
         display : block;
     }
 
-    .navbar .subMenu li:hover .superSubMenu a{
-        background : url("pics/general_pics/menu_2.png");
-    }
-
-    .navbar .subMenu a:hover{
-        color : #ffee00;
-    } 
-    
-    .navbar .superSubMenu li:hover a{
-        color : #ffee00;
-    }
 
     /*Slideshow*/
 
@@ -1134,6 +1120,46 @@ body{
         font-size : 18px;
     }
 
+    .navbar .subMenu li:hover .superSubMenu{
+        display : block;
+    }
+
+    .navbar .subMenu li:hover .superSubMenu a{
+        background : url("pics/general_pics/menu_2.png");
+    }
+
+    .navbar .subMenu a:hover{
+        color : #ffee00;
+    } 
+    
+    .navbar .superSubMenu li:hover a{
+        color : #ffee00;
+    }
+
+    .navbar .subMenu a{
+        padding : 7px 15px;
+    }
+
+    .navbar .mainMenu li:hover a{
+        background : url("pics/general_pics/menu_1.png");
+    }
+
+    .navbar .mainMenu li:hover .subMenu{
+        display : block;
+    }
+
+    .navbar .mainMenu a:focus{
+        background : transparent;
+    }
+
+    .subMenu.subMenu-displaying{
+        display : none;
+    }
+
+    .superSubMenu.superSubMenu-displaying{
+        display : none;
+    }
+
     /**Slide show area**/
 
     .slideshow-container{
@@ -1174,5 +1200,11 @@ body{
 
     #contactform .icons-container{
         width : 80%;
+    }
+}
+
+@media only screen and (min-width : 1920px){
+    body{
+        width : 60%;
     }
 }
