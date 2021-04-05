@@ -119,7 +119,6 @@ body{
     display : block;
 }
 
-
 .dropdownDivider{
     display : none;
     border : 1px solid white;
@@ -1230,7 +1229,6 @@ body{
     .navbar .mainMenu li:nth-of-type(5) a:hover{
         background : transparent;
     }
-    
 
     /**Slide show area**/
 

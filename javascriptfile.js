@@ -23,6 +23,10 @@ dropableLinks.forEach((dropableLink) => {
 
     dropableLink.addEventListener("click" , (e) => {
         e.preventDefault();
+
+        Array.from(subMenus).forEach((subMenu) => {
+            subMenu.classList.remove("subMenu-displaying");
+        })
         
         if(dropableLink.innerText == "Product Range"){
             subMenus[0].classList.toggle("subMenu-displaying");
@@ -38,8 +42,11 @@ dropableLinks.forEach((dropableLink) => {
 
 superDropableLinks.forEach((superDropableLink) => {
     superDropableLink.addEventListener("click" , (e) => {
-
         e.preventDefault();
+
+        Array.from(superSubMenus).forEach((superSubMenu) => {
+            superSubMenu.classList.remove("superSubMenu-displaying");
+        })
         
         if(superDropableLink.innerText == "Bread"){
             superSubMenus[0].classList.toggle("superSubMenu-displaying");         
