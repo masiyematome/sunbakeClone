@@ -472,6 +472,35 @@ body{
     font-size: 14px;
 }
 
+.competitions-body .competitions-band{
+    background : url("pics/general_pics/header.jpg");
+}
+
+.competitions-body .content-container{
+    padding : 40px 30px;
+}
+
+.competitions-body .content-container h2{
+    color : #0059a9;
+    font-size : 30px;
+}
+
+.competitions-body .competition-terms{
+    list-style-type:none;
+}
+
+.competitions-body .picturesPart{
+    padding : 10px 15px;
+}
+
+.competitions-body .picturesPart img{
+    width : 100%;
+}
+
+.competitions-line{
+    border : 1.5px dashed #ed1c24;
+}
+
 /*****CONTACT US PAGE STYLING STARTS HERE*****/
 
 .contact-us-body .content-wrapper .image-container{
@@ -925,6 +954,10 @@ body{
         background : url("pics/general_pics/menu_2.png");
     }
 
+    .navbar .subMenu , .navbar .superSubMenu{
+        z-index : 2;
+    }
+
     .dropdownDivider{
         display : block;
     }
@@ -1030,7 +1063,7 @@ body{
     .homepage-products,.aboutus-body,.terms-and-conditions,
     .bakeries-content,.downloads-container,.everyday-range-breads,
     .vita-life-breads,.everyday-buns-and-rolls,.treats-buns-range,
-    .vita-life-buns,.content-wrapper{
+    .vita-life-buns,.content-wrapper,.competitions-body .content-container{
         padding : 40px 100px 20px;
     }
 
@@ -1080,6 +1113,56 @@ body{
 
     #contactform .icons-container{
         width : 100%;
+    }
+
+    /**Sitemap**/
+    
+    .contact-details .row{
+        display : flex;
+    }
+
+    .contact-details .sitemap{
+        display : flex;
+        flex-direction: column;
+        position : relative;
+        align-self: center;
+    }
+
+    .contact-details .spoonpart{
+        justify-content: flex-start;
+        width : 45%;
+    }
+
+    .contact-details .sitemap{
+        width : 55%;
+    }
+
+    .sitemap p,.sitemap a{
+        color : white;
+        font-weight : bold;
+    }
+
+    .sitemap ul{
+        list-style-type : none;
+    }
+
+    .sitemap ul li{
+        display: inline;
+    }
+
+    .sitemap a{
+        position : relative;
+        padding : 5px;
+    }
+
+    .sitemap a::after{
+        content : '|';
+        position : absolute;
+        left : 100%;
+    }
+
+    .sitemap li:nth-of-type(9) a::after{
+        display : none;
     }
 
 }
