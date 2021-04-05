@@ -338,6 +338,10 @@ body{
     padding : 20px 0px 0px;
 }
 
+.aboutus-body img{
+    width : 100%;
+}
+
 
 /*****PRODUCT RANGE STYLING STARTS HERE*****/
 
@@ -1050,11 +1054,42 @@ body{
         grid-column-gap: 4%;
     }
 
-    /**Everyday range buns**/
+    /**Common buns pages styling**/
 
     .buns-and-rolls,.buns-treats,.vita-buns{
         grid-column-gap: 4%;
         padding : 0px 100px 20px;
+        grid-template-columns: repeat(12,1fr);
+    }
+
+    /**Everyday range buns**/
+
+    .buns-and-rolls > div:nth-child(odd){
+        grid-column : 2 / 7;
+    }
+
+    .buns-and-rolls > div:nth-child(even){
+        grid-column : 7 / 12;
+    }
+
+    /**Treats buns**/
+
+    .buns-treats > div:nth-child(odd){
+        grid-column:2 / 7;
+    }
+
+    .buns-treats > div:nth-child(even){
+        grid-column:7 / 12;
+    }
+
+    /**Vita buns**/
+
+    .vita-buns > div:nth-child(odd){
+        grid-column: 2 / 7;
+    }
+
+    .vita-buns > div:nth-child(even){
+        grid-column : 7 / 12;
     }
     
     /**Common styling**/
@@ -1218,11 +1253,11 @@ body{
         background : transparent;
     }
 
-    .subMenu.subMenu-displaying{
+    .subMenu{
         display : none;
     }
 
-    .superSubMenu.superSubMenu-displaying{
+    .superSubMenu{
         display : none;
     }
 

@@ -16,6 +16,7 @@ const dropableLinks = document.querySelectorAll(".dropable");
 const superDropableLinks = document.querySelectorAll(".first > li > a");
 const subMenus = document.querySelectorAll(".subMenu");
 const superSubMenus = document.querySelectorAll(".superSubMenu");
+const allLinks = document.querySelectorAll(".navbar li a");
 
 /**Make dropable links clickable**/
 
@@ -23,14 +24,9 @@ dropableLinks.forEach((dropableLink) => {
 
     dropableLink.addEventListener("click" , (e) => {
         e.preventDefault();
-
-        Array.from(subMenus).forEach((subMenu) => {
-            subMenu.classList.remove("subMenu-displaying");
-        })
         
         if(dropableLink.innerText == "Product Range"){
-            subMenus[0].classList.toggle("subMenu-displaying");
-            
+            subMenus[0].classList.toggle("subMenu-displaying");  
         }
 
         else if(dropableLink.innerText == "Competitions"){
@@ -44,7 +40,7 @@ superDropableLinks.forEach((superDropableLink) => {
     superDropableLink.addEventListener("click" , (e) => {
         e.preventDefault();
 
-        Array.from(superSubMenus).forEach((superSubMenu) => {
+        Array.from(superSubMenus).forEach(superSubMenu => {
             superSubMenu.classList.remove("superSubMenu-displaying");
         })
         
